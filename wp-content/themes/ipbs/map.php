@@ -6,7 +6,8 @@
     <title></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js"></script>
     <script src="assets/scripts/animate.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">-->
+    <link rel="stylesheet" type="text/css" href="assets/css/map.css">
 </head>
 
 <body style="min-height: 100%;">

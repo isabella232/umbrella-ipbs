@@ -17,10 +17,16 @@ get_header();
             the_post();
             ?>
             <article id="front-page">
-                <?php the_content(); ?>
-                <div id="map-wrapper">
-                    <iframe src="<?php echo get_template_directory_uri(); ?>/map.php" id="map-frame"
-                            scrolling="no"></iframe>
+                <div class="left">
+                    <?php the_content(); ?>
+                </div>
+                <div class="right">
+                    <h2 class="p1"><strong>Member Stations</strong></h2>
+                    <p class="p1"><span class="s1">The IPBS Indiana map displays all of the member stations located in Indiana. Click on a city to see its stations and coverage area.</span></p>
+                    <div id="map-wrapper">
+                        <iframe src="<?php echo get_template_directory_uri(); ?>/map.php" id="map-frame"
+                                scrolling="no"></iframe>
+                    </div>
                 </div>
             </article>
         <?php } ?>

@@ -1,0 +1,28 @@
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+line {
+  stroke-dashoffset: 1000;
+}
+.coverage {
+  pointer-events: none;
+}
+.coverage > g > circle {
+  opacity: 0;
+}
+.coverage > g > line {
+  opacity: 0;
+}
+.coverage > g > g {
+  opacity: 0;
+}
+.heading {
+  opacity: 0;
+}
+.label {
+  cursor: pointer;
+}
+
