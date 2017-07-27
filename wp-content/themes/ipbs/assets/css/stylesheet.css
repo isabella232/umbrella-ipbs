@@ -1,3 +1,15 @@
+/**
+ * Primary ipbs stlyesheet
+ *
+ * Contents, approximately:
+ * - general
+ * - header
+ * - menu
+ * - main body
+ * - sliders
+ * - footer
+ * - map
+ */
 *{
   padding: 0;
   margin: 0;
@@ -524,33 +536,6 @@ article p {
 /*end footer*/
 
 /*begin map*/
-
-svg {
-  width: 100%;
-  height: auto;
-}
-
-line {
-  stroke-dashoffset: 1000;
-}
-.coverage {
-  pointer-events: none;
-}
-.coverage > g > circle {
-  opacity: 0;
-}
-.coverage > g > line {
-  opacity: 0;
-}
-.coverage > g > g {
-  opacity: 0;
-}
-.heading {
-  opacity: 0;
-}
-.label {
-  cursor: pointer;
-}
 
 #map-wrapper {
   width: 100%;

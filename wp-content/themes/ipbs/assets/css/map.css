@@ -1,4 +1,4 @@
-
+/* styles for the map, loaded outside of the main stylesheet because the map is in an iframe */
 svg {
   width: 100%;
   height: auto;
