@@ -26,3 +26,41 @@ line {
   cursor: pointer;
 }
 
+#legend {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #221F1F;
+  border: 2px solid #d1d2d3;
+  padding: 0.5em;
+}
+#legend span + span {
+  padding-left: 1em;
+}
+#legend > span::before {
+  display: inline-block;
+  width: 1.5em;
+  height: 1em;
+  content: '';
+  vertical-align: top;
+  margin-right: 0.7em;
+}
+#legend .tv::before {
+  background-color: #4378B6;
+}
+#legend .fm::before {
+  background-color: #F06338;
+}
+#legend .am::before {
+  background-color: #FDC713;
+}
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

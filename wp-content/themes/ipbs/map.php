@@ -12,6 +12,11 @@
 
 <body style="min-height: 100%;">
 	<div id="map-container">
+		<div id="legend">
+			<span class="tv">TV <span class="visuallyhidden">stations are blue</span></span>
+			<span class="fm">FM <span class="visuallyhidden">stations are orange</span></span>
+			<span class="am">AM <span class="visuallyhidden">stations are yellow</span></span>
+		</div>
 		<?php echo file_get_contents( dirname( __FILE__ ) . "/assets/images/map.svg" ); ?>
 	</div>
 </body>
