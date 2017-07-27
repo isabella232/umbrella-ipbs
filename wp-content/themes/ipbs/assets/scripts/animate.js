@@ -41,8 +41,8 @@ function animateCity(id) {
     var heading = clickedElement.querySelector('.heading');
     var label = clickedElement.querySelector('.label > g');
     var coverageGroup = clickedElement.querySelectorAll('.coverage > g');
-    Velocity(heading, {opacity: 1}, {duration: 1000, delay: 1500});
-    Velocity(label, {opacity: 0}, {duration: 1000, delay: 1000});
+    Velocity(heading, {opacity: 1}, {duration: 500, delay: 200});
+    Velocity(label, {opacity: 0}, {duration: 500, delay: 200});
 
     for (var w = 0; w < coverageGroup.length; w++) {
         (function (w) {
@@ -55,17 +55,17 @@ function animateCity(id) {
                     var opacity = circle.getAttribute("opacity");
                     circle.setAttribute("r", 0);
                     Velocity(circle, {opacity: opacity}, 0);
-                    Velocity(circle, {r: radius}, {duration: 1000, easing: "easeOutCirc"});
+                    Velocity(circle, {r: radius}, {duration: 500, easing: "easeOutCirc"});
                 }
                 if (line) {
                     Velocity(line, {opacity: opacity}, 0);
-                    Velocity(line, {'stroke-dashoffset': 1000}, {duration: 0, delay: 0});
-                    Velocity(line, {'stroke-dashoffset': 0}, {duration: 1000, delay: 1000});
+                    Velocity(line, {'stroke-dashoffset': 500}, {duration: 0, delay: 0});
+                    Velocity(line, {'stroke-dashoffset': 0}, {duration: 500, delay: 200});
                 }
                 if (text) {
-                    Velocity(text, {opacity: 1}, {duration: 1000, delay: 2000,});
+                    Velocity(text, {opacity: 1}, {duration: 500, delay: 200,});
                 }
-            }, 3000 * w);
+            }, 500 * w);
         }(w));
     }
 }
