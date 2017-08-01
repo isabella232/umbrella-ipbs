@@ -212,7 +212,7 @@ article {
   width: 700px;
   margin: 0 auto;
   margin-top: 67px;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 #front-page {
@@ -255,12 +255,13 @@ article p {
   margin-bottom: 15px;
 }
 
+
+/* leftcolumn is the main content column */
 .leftcolumn {
   padding-top: 50px;
   width: 580px;
   float: left;
   margin-left: 5vw;
-
 }
 
 .leftcolumn a {
@@ -271,7 +272,7 @@ article p {
   color: #195288;
   text-decoration: underline;
 }
-.leftcolumn a:visited{
+.leftcolumn a:visited {
   color: #195288;
 }
 
@@ -280,7 +281,7 @@ article p {
   font-size: 1.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .leftcolumn ul {
@@ -292,7 +293,7 @@ article p {
   line-height: 2.2rem;
   color: #666666;
   font-weight: 300;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .leftcolumn h3 {
@@ -300,7 +301,7 @@ article p {
   font-size: 1.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 
@@ -309,9 +310,11 @@ article p {
   line-height: 2.2rem;
   color: #666666;
   font-weight: 300;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
+
+/* rightcolumn is the sidebar */
 .rightcolumn {
   float: right;
   padding-top: 50px;
