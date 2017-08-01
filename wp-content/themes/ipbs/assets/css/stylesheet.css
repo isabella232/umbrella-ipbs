@@ -128,6 +128,9 @@ ul.bg_slider li{
   line-height: 40px;
   padding-left: 15px;
 }
+.login a {
+  text-decoration: none;
+}
 
 
 /*end header*/
@@ -213,6 +216,8 @@ article {
   margin: 0 auto;
   margin-top: 67px;
   margin-bottom: 60px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 #front-page {
@@ -247,12 +252,9 @@ article h2 {
 }
 
 article p {
-  font-size: 1.1rem;
-  line-height: 2.2rem;
-  color: #666666;
   font-weight: 300;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 
@@ -262,56 +264,57 @@ article p {
   width: 580px;
   float: left;
   margin-left: 5vw;
+  color: #666666;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
-.leftcolumn a {
-  color: #195288;
-  text-decoration: none;
-}
-.leftcolumn a:hover {
+a {
   color: #195288;
   text-decoration: underline;
 }
-.leftcolumn a:visited {
+a:hover {
+  color: #195288;
+  text-decoration: underline;
+  background-color: hsla(209, 69%, 95%, 1);
+}
+a:visited {
   color: #195288;
 }
 
-.leftcolumn h2 {
+.leftcolumn h2,
+.leftcolumn h3,
+.leftcolumn h4 {
   color: #195288;
-  font-size: 1.7rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+.leftcolumn h2 {
+  font-size: 1.7rem;
   margin-bottom: 30px;
 }
-
-.leftcolumn ul {
-  list-style: none;
-}
-
-.leftcolumn ul li {
-  font-size: 1.1rem;
-  line-height: 2.2rem;
-  color: #666666;
-  font-weight: 300;
-  margin-bottom: 60px;
-}
-
 .leftcolumn h3 {
-  color: #195288;
-  font-size: 1.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.leftcolumn h4 {
+  font-size: 1.3rem;
   margin-bottom: 10px;
 }
 
-
-.leftcolumn p {
-  font-size: 1.1rem;
-  line-height: 2.2rem;
-  color: #666666;
-  font-weight: 300;
-  margin-bottom: 60px;
+article ul {
+  list-style: disc;
 }
+
+article ol li,
+article ul li {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+article blockquote {
+}
+
 
 
 /* rightcolumn is the sidebar */
