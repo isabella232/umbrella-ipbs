@@ -804,7 +804,12 @@
 					<path fill="#515350" d="M859.4,286.h8.2v2.5h-5.2v2.6h4.4v2.5h-4.4v3h5.4v2.5h-8.4V286.4z"/>
 				</g>
 				<circle fill="#989898" cx="909.3" cy="311.4" r="5.5"/>
-				<rect x="855" y="282.7" opacity="1.000000e-02" fill="#FFFFFF" width="118.2" height="40.7"
+				<circle opacity="0.7" fill="#245A8F" cx="890.8" cy="306" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="852.8" cy="211" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="899.4" cy="307.6" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="877.4" cy="323.6" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="881.4" cy="332.1" r="5"/>
+				<rect x="855" y="182.7" opacity="1.000000e-02" fill="#FFFFFF" width="118.2" height="200.7"
 					  onclick="animateClickedCity('fort_wayne')"/>
 			</g>
 		</g>
@@ -957,7 +962,12 @@
 					<text x="827.2" y="470.4">Muncie</text>
 				</g>
 				<circle fill="#989898" cx="867.9" cy="486.8" r="5.5"/>
-				<rect x="822.5" y="454.6" opacity="1.000000e-02" fill="#FFFFFF" width="78.3" height="40.7"
+				<circle opacity="0.3" fill="#ED2224" cx="811.2" cy="504.4" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="821.6" cy="399.8" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="854.2" cy="496.4" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="904.2" cy="560.4" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="921.2" cy="436.4" r="5"/>
+				<rect x="800" y="389" opacity="1.000000e-02" fill="#FFFFFF" width="130" height="200"
 					  onclick="animateClickedCity('muncie')"/>
 			</g>
 		</g>
@@ -980,8 +990,7 @@
 					s-4.2-1.3-4.2-5.1V682z"/>
 						<path fill="#1A5388" d="M1079.4,688.8h7.2v1h-7.2V688.8z"/>
 						<path fill="#1A5388" d="M1095,683.3h-3.6V682h8.7v1.3h-3.6v10.6h-1.5V683.3z"/>
-						<path fill="#1A5388" d="M1100.5,682h1.6l1.9,6.4c0.4,1.4,0.7,2.5,1.1,3.9h0.1c0.4-1.4,0.7-2.5,1.1-3.9l1.9-6.4h1.5l-3.7,11.8
-					h-1.7L1100.5,682z"/>
+						<path fill="#1A5388" d="M1100.5,682h1.6l1.9,6.4c0.4,1.4,0.7,2.5,1.1,3.9h0.1c0.4-1.4,0.7-2.5,1.1-3.9l1.9-6.4h1.5l-3.7,11.8h-1.7L1100.5,682z"/>
 					</g>
 
 					<line opacity="0.7" fill="none" stroke="#245A8F" stroke-width="3" stroke-miterlimit="10"
@@ -1012,7 +1021,9 @@
 					<text x="609.5" y="685.4">Bloomington</text>
 				</g>
 				<circle fill="#989898" cx="679.3" cy="697.6" r="5.5"/>
-				<rect x="616.5" y="667.6" opacity="1.000000e-02" fill="#FFFFFF" width="137.7" height="40.7"
+				<circle opacity="0.7" fill="#245A8F" cx="681.1" cy="688.6" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="694.4" cy="706.6" r="5"/>
+				<rect x="616.5" y="667.6" opacity="1.000000e-02" fill="#FFFFFF" width="137.7" height="60.7"
 					  onclick="animateClickedCity('bloomington')"/>
 			</g>
 		</g>
@@ -1045,9 +1056,7 @@
 				</g>
 				<g>
 					<g>
-						<path fill="#F1605C" d="M259.5,928h1.5l1.2,6.4c0.2,1.3,0.5,2.5,0.7,3.8h0.1c0.3-1.3,0.5-2.6,0.8-3.8l1.6-6.4h1.4l1.6,6.4
-					c0.3,1.2,0.6,2.5,0.8,3.8h0.1c0.2-1.3,0.5-2.6,0.7-3.8l1.2-6.4h1.5l-2.4,11.8h-1.8l-1.8-7.1c-0.2-0.9-0.4-1.8-0.6-2.7h-0.1
-					c-0.2,0.9-0.4,1.8-0.6,2.7l-1.8,7.1H262L259.5,928z"/>
+						<path fill="#F1605C" d="M259.5,928h1.5l1.2,6.4c0.2,1.3,0.5,2.5,0.7,3.8h0.1c0.3-1.3,0.5-2.6,0.8-3.8l1.6-6.4h1.4l1.6,6.4c0.3,1.2,0.6,2.5,0.8,3.8h0.1c0.2-1.3,0.5-2.6,0.7-3.8l1.2-6.4h1.5l-2.4,11.8h-1.8l-1.8-7.1c-0.2-0.9-0.4-1.8-0.6-2.7h-0.1c-0.2,0.9-0.4,1.8-0.6,2.7l-1.8,7.1H262L259.5,928z"/>
 						<path fill="#F1605C" d="M274.7,928h1.5l4.3,7.4l1.3,2.4h0.1c-0.1-1.2-0.2-2.5-0.2-3.8V928h1.4v11.8h-1.5l-4.3-7.4l-1.3-2.4H276
 					c0.1,1.2,0.2,2.4,0.2,3.7v6.2h-1.4V928z"/>
 						<path fill="#F1605C" d="M286.3,928h1.5v11.8h-1.5V928z"/>
@@ -1069,7 +1078,9 @@
 					<text x="453.4" y="918.5">Evansville</text>
 				</g>
 				<circle fill="#989898" cx="508.2" cy="934" r="5.4"/>
-				<rect x="460.6" y="904.2" opacity="1.000000e-02" fill="#FFFFFF" width="109.9" height="40.7"
+				<circle opacity="0.3" fill="#ED2224" cx="570.4" cy="933.6" r="5"/>
+				<circle opacity="0.7" fill="#245A8F" cx="567" cy="928.7" r="5"/>
+				<rect x="460.6" y="904.2" opacity="1.000000e-02" fill="#FFFFFF" width="139.9" height="60.7"
 					  onclick="animateClickedCity('evansville')"/>
 			</g>
 		</g>
@@ -1128,7 +1139,9 @@
 					<text x="460" y="777">Vincennes</text>
 				</g>
 				<circle fill="#989898" cx="515.8" cy="793" r="5.5"/>
-				<rect x="468.3" y="763.6" opacity="1.000000e-02" fill="#FFFFFF" width="105.9" height="40.7"
+				<circle opacity="0.7" fill="#245A8F" cx="537.2" cy="796.5" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="535.4" cy="803.6" r="5"/>
+				<rect x="468.3" y="763.6" opacity="1.000000e-02" fill="#FFFFFF" width="105.9" height="60.7"
 					  onclick="animateClickedCity('vincennes')"/>
 			</g>
 		</g>
@@ -1183,6 +1196,8 @@
 					<text x="678" y="551">Indianapolis</text>
 				</g>
 				<circle fill="#989898" cx="741.8" cy="567" r="5.5"/>
+					<circle opacity="0.7" fill="#245A8F" cx="739.7" cy="537.6" r="5"/>
+					<circle opacity="0.3" fill="#ED2224" cx="741.4" cy="552.6" r="5"/>
 				<rect x="685.7" y="537.2" opacity="1.000000e-02" fill="#FFFFFF" width="131.4" height="40.7"
 					  onclick="animateClickedCity('indianapolis')"/>
 			</g>
@@ -1241,11 +1256,13 @@
 				</g>
 			</g>
 			<g class="label">
-				<circle fill="#989898" cx="618.1" cy="440.1" r="5.5"/>
 				<g>
 					<text x="524" y="425">West Lafayette</text>
 				</g>
-				<rect x="532.9" y="400.5" opacity="1.000000e-02" fill="#FFFFFF" width="152.8" height="46.4"
+				<circle fill="#989898" cx="618.1" cy="440.1" r="5.5"/>
+					<circle opacity="0.7" fill="#FDC713" cx="626.3" cy="480.1" r="5"/>
+					<circle opacity="0.3" fill="#ED2224" cx="627.9" cy="464.1" r="5"/>
+				<rect x="532.9" y="400.5" opacity="1.000000e-02" fill="#FFFFFF" width="152.8" height="86.4"
 					  onclick="animateClickedCity('west_lafayette')"/>
 			</g>
 		</g>
@@ -1301,7 +1318,9 @@
 					<text x="475" y="216">Merrillville</text>
 				</g>
 				<circle fill="#989898" cx="546.6" cy="232.2" r="5.5"/>
-				<rect x="492.7" y="202.5" opacity="1.000000e-02" fill="#FFFFFF" width="128.4" height="36.3"
+					<circle opacity="0.7" fill="#245A8F" cx="532.9" cy="252.4" r="5"/>
+					<circle opacity="0.3" fill="#ED2224" cx="553.9" cy="247.9" r="5"/>
+				<rect x="492.7" y="202.5" opacity="1.000000e-02" fill="#FFFFFF" width="128.4" height="66.3"
 					  onclick="animateClickedCity('merrillville')"/>
 			</g>
 		</g>
