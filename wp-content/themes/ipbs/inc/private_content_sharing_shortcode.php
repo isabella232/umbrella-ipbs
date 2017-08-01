@@ -20,9 +20,11 @@ function private_content_sharing_shortcode( $atts, $content, $tag ) {
 	ob_start();
 
 	if ( empty( $id ) ) {
-		echo '<h1>You must provide an ID to the shortcode</h1>';
+		echo '<h1>You must provide an ID to the shortcode.</h1>';
 		echo '<code>[ipbs_private_content id="1"]</code>';
-	} else if ( class_exists( 'GFAPI') )  {
+	}
+
+	if ( class_exists( 'GFAPI') )  {
 		$entries = GFAPI::get_entries(
 			$id,
 			$search_criteria = array(
@@ -35,9 +37,6 @@ function private_content_sharing_shortcode( $atts, $content, $tag ) {
 		$title_field = GFAPI::get_fields_by_type( $form, 'text' );
 		$link_field = GFAPI::get_fields_by_type( $form, 'website' );
 		$excerpt_field = GFAPI::get_fields_by_type( $form, 'textarea' );
-		echo '<pre><code>';
-		echo (var_export( $form, true));
-		echo '</code></pre>';
 
 		// loop over entries, show entry from each
 		foreach ( $entries as $entry ) {
@@ -48,7 +47,8 @@ function private_content_sharing_shortcode( $atts, $content, $tag ) {
 				wp_kses_post( $entry[$excerpt_field[0]['id']] )
 			);
 		}
-
+	} else {
+		echo '<h1>You must install and activate the Gravity Forms plugin.</h1>';
 	}
 
 	return ob_get_clean();
