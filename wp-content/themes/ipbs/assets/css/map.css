@@ -25,12 +25,18 @@ line {
 .label {
   cursor: pointer;
 }
+.heading text,
 .label text {
   fill: #515350;
-  font-size: 24px;
   text-transform: uppercase;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
+}
+.label text {
+  font-size: 24px;
+}
+.heading text {
+  font-size: 20px;
 }
 
 #legend {
