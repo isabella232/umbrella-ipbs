@@ -313,8 +313,18 @@ article ul li {
 }
 
 article blockquote {
+  border-left: 2px solid #195288;
+  padding: 1em;
+  margin: 1em 0;
 }
-
+article blockquote *:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+article blockquote *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
 
 /* rightcolumn is the sidebar */
