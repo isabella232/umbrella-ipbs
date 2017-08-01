@@ -1,5 +1,20 @@
 <?php
+/**
+ * Require necessary files
+ */
+function ipbs_requires() {
+	$requires = array(
+		'/inc/private_content_sharing_shortcode.php'
+	);
+	foreach ( $requires as $require ) {
+		require_once( get_stylesheet_directory() . $require );
+	}
+}
+add_action( 'after_setup_theme', 'ipbs_requires' );
 
+/**
+ * enqueue scripts
+ */
 function ipbs_theme_scripts(){
     wp_enqueue_style( 'normalize', get_template_directory_uri()."/normalize.css" );
     wp_enqueue_style( 'style', get_stylesheet_uri(), array("normalize"), "1.0.0" );
