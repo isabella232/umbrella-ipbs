@@ -673,6 +673,8 @@
 					<text x="613.2" y="183.4">South Bend/Elkhart</text>
 				</g>
 				<circle fill="#989898" cx="718.7" cy="199.3" r="5.5"/>
+				<circle opacity="0.7" fill="#245A8F" cx="723.2" cy="198.5" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="741.4" cy="197.6" r="5"/>
 				<rect x="629" y="169.9" opacity="1.000000e-02" fill="#FFFFFF" width="213" height="40.7"
 					  onclick="animateClickedCity('south_bend_x2F__elkhart')"/>
 			</g>
