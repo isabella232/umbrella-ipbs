@@ -60,10 +60,10 @@ function animateCity(id) {
                 if (line) {
                     Velocity(line, {opacity: opacity}, 0);
                     Velocity(line, {'stroke-dashoffset': 500}, {duration: 0, delay: 0});
-                    Velocity(line, {'stroke-dashoffset': 0}, {duration: 500, delay: 200});
+                    Velocity(line, {'stroke-dashoffset': 0}, {duration: 500, delay: 100});
                 }
                 if (text) {
-                    Velocity(text, {opacity: 1}, {duration: 500, delay: 200,});
+                    Velocity(text, {opacity: 1}, {duration: 500, delay: 100,});
                 }
             }, 500 * w);
         }(w));
