@@ -38,6 +38,11 @@ a[href$=pdf]:after {
   background-repeat: no-repeat;
   background-size:contain;
 }
+h1 a,
+h2 a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /*begin header*/
 .header {
@@ -80,7 +85,7 @@ ul.bg_slider li{
   clear: both;
   margin: 0 auto;
 }
-.ipbscenter a{
+.ipbscenter a {
   text-decoration: none;
 }
 
