@@ -27,6 +27,13 @@ get_header();
             <article>
                 <h1 class="entry-title"><?php echo ( isset( $custom['lr_url'][0] ) ) ? '<a href="' . $custom['lr_url'][0] . '">' . get_the_title() . '</a>' : get_the_title(); ?></h1>
                 <?php the_content(); ?>
+                <?php
+                    if ( isset($custom['lr_source'][0] ) ) {
+                        echo '<p class="source">' . __('Source: ', 'argo-links') . '<span>';
+                        echo ( isset( $custom['lr_url'][0] ) ) ? '<a href="' . $custom['lr_url'][0] . '">' . $custom['lr_source'][0] . '</a>' : $custom['lr_source'][0];
+                        echo '</span></p>';
+                    }
+                ?>
             </article>
 
         <?php } ?>
