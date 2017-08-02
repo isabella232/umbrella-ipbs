@@ -578,20 +578,16 @@ article blockquote *:last-child {
 
 #map-wrapper {
   width: 100%;
-  padding-top: 99%;
-  height: 0;
+  height: auto;
   display: block;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 #map-frame {
   border: none;
   height: 100%;
-  overflow: hidden;
+  overflow: visible;
   width:100%;
-  top:0;
-  left:0;
-  position: absolute;
 }
 
 /*end map*/
