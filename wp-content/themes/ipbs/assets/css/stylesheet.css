@@ -168,9 +168,9 @@ ul.bg_slider li{
   color: #ffffff;
   text-decoration: none;
 }
-/*.mainmenu ul li a:hover {
+.mainmenu ul li a:hover {
   background: #4177B6;
-}*/
+}
 
 .mainmenu ul li:hover, .mainmenu ul li.current-menu-parent, .mainmenu ul li.current_page_item {
   background: #4177B6;
@@ -190,6 +190,7 @@ ul.bg_slider li{
 }
 .mainmenu ul li:hover > ul {
   display: block;
+  z-index: 20;
 }
 .mainmenu ul li ul li a{
   padding-left: 20px;
