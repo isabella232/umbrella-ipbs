@@ -14,7 +14,7 @@ function opacityToZero() {
         for (var q = 0; q < coverageGroups.length; q++) {
             var circle = coverageGroups[q].querySelector('circle');
             var line = coverageGroups[q].querySelector('line');
-            var text = coverageGroups[q].querySelector('g');
+            var text = coverageGroups[q].querySelector('text');
             if (circle) {
                 Velocity(circle, "stop");
                 circle.style.opacity = 0;
@@ -49,7 +49,7 @@ function animateCity(id) {
             timeOut[w] = setTimeout(function () {
                 var circle = coverageGroup[w].querySelector('circle');
                 var line = coverageGroup[w].querySelector('line');
-                var text = coverageGroup[w].querySelector('g');
+                var text = coverageGroup[w].querySelector('text');
                 if (circle) {
                     var radius = circle.getAttribute("r");
                     var opacity = circle.getAttribute("opacity");

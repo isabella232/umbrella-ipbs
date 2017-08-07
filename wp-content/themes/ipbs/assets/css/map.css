@@ -16,8 +16,11 @@ line {
 .coverage > g > line {
   opacity: 0;
 }
-.coverage > g > g {
+.coverage > g > text {
   opacity: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
 }
 .heading {
   opacity: 0;
@@ -61,11 +64,23 @@ line {
 #legend .tv::before {
   background-color: #4378B6;
 }
+.coverage .tv {
+  color: #4378B6;
+  fill: #4378B6;
+}
 #legend .fm::before {
   background-color: #F06338;
 }
+.coverage .fm {
+  color: #F06338;
+  fill: #F06338;
+}
 #legend .am::before {
   background-color: #FDC713;
+}
+.coverage .am {
+  color: #FDC713;
+  fill: #FDC713;
 }
 .visuallyhidden {
   position: absolute;
