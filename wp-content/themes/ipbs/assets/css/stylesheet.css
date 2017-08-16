@@ -230,6 +230,7 @@ article {
 }
 
 #front-page {
+  padding-top: 3em;
   padding-bottom: 0;
   width: 95%;
   margin: 0 auto;
