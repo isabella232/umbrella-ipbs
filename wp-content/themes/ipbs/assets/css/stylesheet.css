@@ -212,6 +212,8 @@ ul.bg_slider li{
 
 /*begin main body*/
 .maincontent{
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .maincontent:after {
