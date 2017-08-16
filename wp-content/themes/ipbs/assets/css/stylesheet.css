@@ -223,11 +223,11 @@ ul.bg_slider li{
 }
 
 article {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
   margin-top: 67px;
   margin-bottom: 60px;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -276,7 +276,7 @@ article p {
 /* leftcolumn is the main content column */
 .leftcolumn {
   padding-top: 50px;
-  width: 580px;
+  width: auto;
   float: left;
   margin-left: 5vw;
   color: #666666;
@@ -349,7 +349,7 @@ article blockquote *:last-child {
 /* rightcolumn is the sidebar */
 .rightcolumn {
   float: right;
-  padding-top: 50px;
+  padding: 3em 1em;
   width: 364px;
   background: #e6e5e5;
   border-left: solid 1px #d1d1d1;
