@@ -235,6 +235,7 @@ article {
   padding-top: 3em;
   padding-bottom: 0;
   width: 95%;
+  max-width: none;
   margin: 0 auto;
 }
 #front-page .left p,
