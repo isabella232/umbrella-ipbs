@@ -14,7 +14,7 @@ function opacityToZero() {
         for (var q = 0; q < coverageGroups.length; q++) {
             var circle = coverageGroups[q].querySelector('circle');
             var line = coverageGroups[q].querySelector('line');
-            var text = coverageGroups[q].querySelector('g');
+            var text = coverageGroups[q].querySelector('text');
             if (circle) {
                 Velocity(circle, "stop");
                 circle.style.opacity = 0;
@@ -41,31 +41,31 @@ function animateCity(id) {
     var heading = clickedElement.querySelector('.heading');
     var label = clickedElement.querySelector('.label > g');
     var coverageGroup = clickedElement.querySelectorAll('.coverage > g');
-    Velocity(heading, {opacity: 1}, {duration: 1000, delay: 1500});
-    Velocity(label, {opacity: 0}, {duration: 1000, delay: 1000});
+    Velocity(heading, {opacity: 1}, {duration: 500, delay: 200});
+    Velocity(label, {opacity: 0}, {duration: 500, delay: 200});
 
     for (var w = 0; w < coverageGroup.length; w++) {
         (function (w) {
             timeOut[w] = setTimeout(function () {
                 var circle = coverageGroup[w].querySelector('circle');
                 var line = coverageGroup[w].querySelector('line');
-                var text = coverageGroup[w].querySelector('g');
+                var text = coverageGroup[w].querySelector('text');
                 if (circle) {
                     var radius = circle.getAttribute("r");
                     var opacity = circle.getAttribute("opacity");
                     circle.setAttribute("r", 0);
                     Velocity(circle, {opacity: opacity}, 0);
-                    Velocity(circle, {r: radius}, {duration: 1000, easing: "easeOutCirc"});
+                    Velocity(circle, {r: radius}, {duration: 500, easing: "easeOutCirc"});
                 }
                 if (line) {
                     Velocity(line, {opacity: opacity}, 0);
-                    Velocity(line, {'stroke-dashoffset': 1000}, {duration: 0, delay: 0});
-                    Velocity(line, {'stroke-dashoffset': 0}, {duration: 1000, delay: 1000});
+                    Velocity(line, {'stroke-dashoffset': 500}, {duration: 0, delay: 0});
+                    Velocity(line, {'stroke-dashoffset': 0}, {duration: 500, delay: 100});
                 }
                 if (text) {
-                    Velocity(text, {opacity: 1}, {duration: 1000, delay: 2000,});
+                    Velocity(text, {opacity: 1}, {duration: 500, delay: 100,});
                 }
-            }, 3000 * w);
+            }, 500 * w);
         }(w));
     }
 }
