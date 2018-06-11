@@ -5,6 +5,9 @@
  * Date: 12/15/15
  * Time: 10:37 AM
  */
+wp_enqueue_style( 'map-stylesheet', get_stylesheet_directory_uri() . '/assets/css/map.css' );
+wp_enqueue_script( 'map-velocity', "https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js" );
+wp_enqueue_script( 'map-animate', get_stylesheet_directory_uri() . '/assets/scripts/animate.js' );
 
 get_header();
 ?>
@@ -17,10 +20,22 @@ get_header();
             the_post();
             ?>
             <article id="front-page">
-                <?php the_content(); ?>
-                <div id="map-wrapper">
-                    <iframe src="<?php echo get_template_directory_uri(); ?>/map.php" id="map-frame"
-                            scrolling="no"></iframe>
+                <div class="left">
+                    <?php the_content(); ?>
+                </div>
+                <div class="right">
+                    <h2 class="p1"><strong>Member Stations</strong></h2>
+                    <p class="p1"><span class="s1">The IPBS Indiana map displays all of the member stations located in Indiana. Click on a city to see its stations and coverage area.</span></p>
+                    <div id="map-wrapper">
+                        <div id="map-container">
+                            <div id="legend">
+                                <span class="tv">TV <span class="visuallyhidden">stations are blue</span></span>
+                                <span class="fm">FM <span class="visuallyhidden">stations are orange</span></span>
+                                <span class="am">AM <span class="visuallyhidden">stations are yellow</span></span>
+                            </div>
+                            <?php echo file_get_contents( dirname( __FILE__ ) . "/assets/images/map.svg" ); ?>
+                        </div>
+                    </div>
                 </div>
             </article>
         <?php } ?>
