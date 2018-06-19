@@ -54,7 +54,7 @@ get_header();
                         'post_type'=>'station',
                         'posts_per_page'=>-1,
                         'posts_status'=>'publish',
-                        'orderby'=>'title',
+                        'orderby'=>'date',
                         'order'=>'ASC'
                     );
 
