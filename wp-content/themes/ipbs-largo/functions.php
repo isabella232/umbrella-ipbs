@@ -16,6 +16,7 @@ function largo_child_require_files() {
 
 	$includes = array(
 		'/inc/enqueue.php',
+		'/inc/private_content_sharing_shortcode.php',
 	);
 
 	foreach ( $includes as $include ) {
