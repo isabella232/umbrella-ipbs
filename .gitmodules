@@ -1,0 +1,4 @@
+[submodule "wp-content/themes/largo"]
+	path = wp-content/themes/largo
+	url = https://github.com/INN/largo.git
+	branch = release
