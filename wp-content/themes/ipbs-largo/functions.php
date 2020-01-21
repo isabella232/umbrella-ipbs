@@ -1,4 +1,7 @@
 <?php
+
+define( 'SHOW_GLOBAL_NAV', false );
+
 /**
  * Include theme files
  *
@@ -25,3 +28,5 @@ function largo_child_require_files() {
 	
 }
 add_action( 'after_setup_theme', 'largo_child_require_files' );
+
+register_nav_menu('main-nav-bottom', 'Main Navigation Bottom');

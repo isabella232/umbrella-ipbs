@@ -1,0 +1,52 @@
+#site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::before,
+    &::after {
+        display: none;
+    }
+    .header_img {
+        max-height: 100px;
+    }
+    #main-nav {
+        height: fit-content;
+        border: 0;
+        .navbar-inner {
+            .container {
+                .nav-shelf {
+                    display: flex;
+                    flex-direction: column;
+                    ul {
+                        text-align: right;
+                        margin-bottom: 0;
+                        &.nav {
+                            li {
+                                a {
+                                    color: @gray;
+                                }
+                            }
+                        }
+                        &.bottom-nav {
+                            li {
+                                a {
+                                    color: @black;
+                                }
+                            }
+                        }
+                        li {
+                            float: none;
+                            display: inline-block;
+                            a {
+                                text-transform: uppercase;
+                                &:hover {
+                                    background: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
