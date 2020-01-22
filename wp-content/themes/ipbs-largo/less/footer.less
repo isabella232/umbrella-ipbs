@@ -1,3 +1,90 @@
+.before-footer-wrapper {
+    background-color: @white!important;
+    #before-footer {
+        .widgettitle {
+            color: @blue;
+        }
+        .widget_text {
+            text-align: center;
+            pre {
+                background: transparent;
+                border: none;
+                .tcls-wrap {
+                    div {
+                        div {
+                            max-width: initial!important;
+                        }
+                    }
+                    #tc-logo {
+                        .owl-controls {
+                            .owl-nav {
+                                display: none!important;
+                            }
+                            .owl-dots {
+                                .owl-dot {
+                                    display: inline-block!important;
+                                }
+                            }
+                        }
+                        .owl-stage-outer {
+                            .owl-stage {
+                                .owl-item {
+                                    margin-right: 0!important;
+                                    .item {
+                                        img {
+                                            border: none;
+                                            max-width: 80%;
+                                            margin: 0 auto;
+                                            @media (max-width: 769px) {
+                                                max-width: 100%;
+                                                width: auto;
+                                            }
+                                        }
+                                    }
+                                    @media (max-width: 768px) {
+                                        margin: 20px 0!important;
+                                    }
+                                }
+                            }
+                        }
+                        @media (max-width: 769px) {
+                            max-width: 75%;
+                            .owl-controls {
+                                .owl-nav {
+                                    display: block!important;
+                                    .owl-prev {
+                                        position: absolute;
+                                        left: -20%;
+                                        margin: 0;
+                                        top: 20%;
+                                    }
+                                    .owl-next {
+                                        top: 20%;
+                                        right: -20%;
+                                        margin: 0;
+                                    }
+                                    .owl-next,
+                                    .owl-prev {
+                                        background: transparent;
+                                        color: @blue;
+                                        font-size: 40px;
+                                    }
+                                }
+                                .owl-dots {
+                                    margin: 0 auto;
+                                    .owl-dot {
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .footer-bg {
     background-color: @blue!important;
     #site-footer {
