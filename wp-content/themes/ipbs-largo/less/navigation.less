@@ -1,5 +1,8 @@
 // sticky nav
 .sticky-nav-wrapper {
+    @media (min-width: 1000px) {
+        display: none;
+    }
     .sticky-nav-container {
         .close {
             display: none;
@@ -13,6 +16,42 @@
                     }
                     .close {
                         display: block;
+                    }
+                }
+            }
+            .nav-shelf {
+                background: @gray;
+                padding: @measure;
+                top: 106px;
+                ul {
+                    margin: 0;
+                    &.nav {
+                        margin-top: @measure;
+                        margin-bottom: @measure * 2;
+                        li {
+                            a {
+                                color: @gray2;
+                            }
+                        }
+                    }
+                    &.bottom-nav {
+                        li {
+                            border-top: 1px solid @black;
+                            &:last-of-type {
+                                border-bottom: 1px solid @black;
+                            }
+                            a {
+                                color: @black;
+                            }
+                        }
+                    }
+                    li {
+                        a {
+                            text-transform: uppercase;
+                            &:hover {
+                                background: none;
+                            }
+                        }
                     }
                 }
             }
@@ -50,42 +89,6 @@
                         img {
                             max-width: 50%;
                             height: auto;
-                        }
-                    }
-                }
-            }
-        }
-        .nav-shelf {
-            background: @gray;
-            padding: @measure;
-            top: 106px;
-            ul {
-                margin: 0;
-                &.nav {
-                    margin-top: @measure;
-                    margin-bottom: @measure * 2;
-                    li {
-                        a {
-                            color: @gray2;
-                        }
-                    }
-                }
-                &.bottom-nav {
-                    li {
-                        border-top: 1px solid @black;
-                        &:last-of-type {
-                            border-bottom: 1px solid @black;
-                        }
-                        a {
-                            color: @black;
-                        }
-                    }
-                }
-                li {
-                    a {
-                        text-transform: uppercase;
-                        &:hover {
-                            background: none;
                         }
                     }
                 }

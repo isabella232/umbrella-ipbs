@@ -1,0 +1,96 @@
+.footer-bg {
+    background-color: @blue!important;
+    #site-footer {
+        #supplementary {
+            padding-top: @measure * 2;
+            .widgettitle {
+                margin-bottom: @measure;
+            }
+            .span3 {
+                width: 20%;
+                margin-left: 0;
+                &:last-of-type {
+                    aside {
+                        padding-left: @measure * 2;
+                    }
+                }
+            }
+            .span6 {
+                width: 60%;
+                padding: 0 @measure + 2rem;
+                border-left: 1px solid @white;
+                border-right: 1px solid @white;
+                margin-left: 0;
+                ul.menu {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 10px;
+                }
+            }
+            .widget-area {
+                ul {
+                    li {
+                        a {
+                            color: @white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #boilerplate {
+        border-top: 1px solid @white;
+        margin-top: @measure;
+        .row-fluid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: @measure;
+            &::before {
+                display: none;
+            }
+            .span6 {
+                width: auto;
+                flex: 1 1 auto;
+                #footer-social {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    width: fit-content;
+                    float: right;
+                }
+                p {
+                    color: @white;
+                    &.footer-credit {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 769px) {
+        #site-footer {
+            #supplementary {
+                .span3, 
+                .span6 {
+                    width: 100%;
+                    aside {
+                        padding: 0!important;
+                    }
+                }
+                .span6 {
+                    border: none;
+                    padding: 0;
+                    ul.menu {
+                        display: block;
+                    }
+                }
+            }
+        }
+        #boilerplate {
+            .row-fluid {
+                flex-direction: column;
+                align-items: baseline;
+            }
+        }
+    }
+}
