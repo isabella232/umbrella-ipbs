@@ -6,6 +6,7 @@ function ipbs_enqueue_styles(){
 	wp_enqueue_style(
 		'largo-child-styles',
 		get_stylesheet_directory_uri() . '/css/child-style.css',
+		null,
 		filemtime( get_stylesheet_directory() . '/css/child-style.css' )
 	);
 	// fonts
