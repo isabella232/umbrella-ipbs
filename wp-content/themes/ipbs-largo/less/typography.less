@@ -1,0 +1,41 @@
+html body {
+	font-family: @font-body;
+    color: @color-body;
+    a {
+        color: @red;
+        text-decoration: underline;
+        &:hover {
+            color: @darkblack;
+        }
+    }
+	p {
+        font-size: 16px;
+		line-height: 1.8rem;
+    }
+    ul {
+        margin-top: @measure;
+        margin-bottom: @measure + 1rem;
+        li {
+            margin-bottom: @measure;
+            font-size: 16px;
+            line-height: 1.8rem;
+        }
+    }
+    ol {
+        margin-top: @measure;
+        margin-bottom: @measure + 1rem;
+        li {
+            margin-bottom: @measure;
+            font-size: 16px;
+            line-height: 1.8rem;
+        }
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: @font-header;
+        font-weight: 800;
+        color: @color-heading;
+        strong {
+            font-weight: 800;
+        }
+	}
+}
