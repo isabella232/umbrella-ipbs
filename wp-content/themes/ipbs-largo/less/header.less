@@ -23,14 +23,16 @@
                         &.nav {
                             li {
                                 a {
-                                    color: @grey;
+                                    color: @darkgrey;
                                 }
                             }
                         }
                         &.bottom-nav {
+                            margin-top: 0;
                             li {
                                 a {
-                                    color: @black;
+                                    color: @darkblack;
+                                    font-weight: 600;
                                 }
                             }
                         }
@@ -39,8 +41,13 @@
                             display: inline-block;
                             a {
                                 text-transform: uppercase;
+                                font-family: @font-header;
+                                font-size: 13px;
+                                letter-spacing: 0.42px;
+                                line-height: 1.8rem;
                                 &:hover {
                                     background: none;
+                                    text-decoration: underline;
                                 }
                             }
                         }

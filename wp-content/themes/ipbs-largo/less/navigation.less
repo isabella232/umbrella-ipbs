@@ -42,8 +42,10 @@
                             p {
                                 text-transform: uppercase;
                                 line-height: normal;
-                                font-size: 18px;
+                                font-size: 12px;
                                 margin-bottom: 0;
+                                font-family: @font-header;
+                                font-weight: 600;
                             }
                         }
                     }
@@ -65,28 +67,35 @@
             ul {
                 margin: 0;
                 &.nav {
-                    margin-top: @measure;
-                    margin-bottom: @measure * 2;
+                    margin-bottom: @measure + 0.5rem;
                     li {
+                        padding: 0.5rem 0;
                         a {
-                            color: @grey;
+                            color: @darkgrey;
+                            padding: 0;
                         }
                     }
                 }
                 &.bottom-nav {
                     li {
-                        border-top: 1px solid @black;
+                        padding: 1rem 0;
+                        border-top: 1px solid @darkgrey;
                         &:last-of-type {
-                            border-bottom: 1px solid @black;
+                            border-bottom: 1px solid @darkgrey;
                         }
                         a {
-                            color: @black;
+                            color: @darkblack;
+                            font-weight: 600;
                         }
                     }
                 }
                 li {
                     a {
                         text-transform: uppercase;
+                        font-family: @font-header;
+                        font-size: 13px;
+                        letter-spacing: 0.42px;
+                        line-height: 1.8rem;
                         &:hover {
                             background: none;
                         }
