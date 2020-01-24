@@ -87,12 +87,18 @@
 }
 
 .footer-bg {
-    background-color: @blue!important;
+    background-color: @darkblue!important;
     #site-footer {
         #supplementary {
             padding-top: @measure * 2;
             .widgettitle {
-                margin-bottom: @measure;
+                margin-bottom: 1rem;
+                font-family: @font-header;
+                font-weight: 800;
+                font-size: 14px;
+                letter-spacing: 0.45px;
+                line-height: 2rem;
+                padding-bottom: 0;
             }
             .span3 {
                 width: 20%;
@@ -120,6 +126,13 @@
                     li {
                         a {
                             color: @white;
+                            font-family: @font-body;
+                            text-decoration: none;
+                            font-size: 16px;
+                            line-height: 1.8rem;
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
                     }
                 }
@@ -150,6 +163,9 @@
                     color: @white;
                     &.footer-credit {
                         text-align: left;
+                        font-family: @font-body;
+                        font-size: 14px;
+                        line-height: 1.5rem;
                     }
                 }
             }
