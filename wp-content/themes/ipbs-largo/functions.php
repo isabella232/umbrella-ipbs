@@ -20,6 +20,7 @@ function largo_child_require_files() {
 	$includes = array(
 		'/inc/enqueue.php',
 		'/inc/private_content_sharing_shortcode.php',
+		'/inc/block-color-palette.php',
 		// homepage
 		'/homepages/layout.php',
 	);
