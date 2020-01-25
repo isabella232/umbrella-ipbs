@@ -5,19 +5,8 @@
 
 ?>
 <div class="">
-	<?php
-		// note that we're making a section containing a background image,
-		// which goes behind a transparent section that contains:
-		// - the article heading
-		// - the article excerpt
-		// - a "Quick links" menu for the site
-	?>
 	<div id="top-story" <?php post_class( '', $topstory->ID ); ?> >
 		<div class="post-image-top-term-container">
-			<?php
-				// The top term
-				largo_maybe_top_term();
-			?>
 			<a class="img" href="<?php echo esc_attr( get_permalink( $topstory ) ); ?>">
 				<?php echo get_the_post_thumbnail( $topstory, 'full' ); ?>
 			</a>
@@ -29,11 +18,12 @@
 					<?php largo_excerpt( $topstory, 2 ); ?>
 				</div>
 			</article>
-			<div class="menu">
+			<div class="menu-container">
 				<?php
 					echo '<h3 class="has-white-color">' . __( 'Quick Links', 'ipbs' ) . '</h3>';
 					wp_nav_menu( array(
 						'theme_location' => IPBS::menu_location,
+						'after' => ' &gt;',
 					) );
 				?>
 			</div>
