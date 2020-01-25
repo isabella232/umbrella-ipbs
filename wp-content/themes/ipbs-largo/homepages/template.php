@@ -18,21 +18,25 @@
 				// The top term
 				largo_maybe_top_term();
 			?>
-			<a class="img" href="<?php echo esc_attr( get_permalink( $topstory ) ); ?>"><?php echo get_the_post_thumbnail( $topstory, 'large' ); ?></a>
+			<a class="img" href="<?php echo esc_attr( get_permalink( $topstory ) ); ?>">
+				<?php echo get_the_post_thumbnail( $topstory, 'full' ); ?>
+			</a>
 		</div>
-		<div class="inner">
+		<div class="inner has-white-color">
 			<article <?php post_class( '', $topstory ); ?>>
 				<h2><a href="<?php the_permalink( $topstory ); ?>"><?php echo get_the_title( $topstory ); ?></a></h2>
 				<div class="excerpt">
 					<?php largo_excerpt( $topstory, 2 ); ?>
-					<a class="view-more-link" href="<?php the_permalink( $topstory ); ?>">Full Story</a>
 				</div>
 			</article>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => IPBS::menu_location,
-				) );
-			?>
+			<div class="menu">
+				<?php
+					echo '<h3 class="has-white-color">' . __( 'Quick Links', 'ipbs' ) . '</h3>';
+					wp_nav_menu( array(
+						'theme_location' => IPBS::menu_location,
+					) );
+				?>
+			</div>
 		</div>
 	</div>
 </div>
