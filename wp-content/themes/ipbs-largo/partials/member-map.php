@@ -12,6 +12,13 @@ wp_register_style(
 	filemtime( get_stylesheet_directory() . '/css/map.css' )
 );
 wp_register_script(
+	'ipbs-map-animate-dependency',
+	'https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js',
+	null,
+	false,
+	true
+);
+wp_register_script(
 	'ipbs-map-animate',
 	get_stylesheet_directory_uri() . '/js/animate.js',
 	array(
@@ -20,14 +27,8 @@ wp_register_script(
 	filemtime( get_stylesheet_directory() . '/js/animate.js' ),
 	true
 );
-wp_register_script(
-	'ipbs-map-animate-dependency',
-	'https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.js',
-	null,
-	false,
-	true
-);
 
+wp_enqueue_script( 'ipbs-map-animate-dependency' );
 wp_enqueue_script( 'ipbs-map-animate' );
 wp_enqueue_style( 'ipbs-map-css' );
 
