@@ -20,6 +20,8 @@ function largo_child_require_files() {
 		'/inc/block-color-palette.php',
 		// homepage
 		'/homepages/layout.php',
+		// widgets
+		'/inc/class-ipbs-member-map-widget.php',
 	);
 
 	foreach ( $includes as $include ) {
