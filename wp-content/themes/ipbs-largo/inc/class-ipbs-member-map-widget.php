@@ -34,10 +34,27 @@ class ipbs_member_map_widget extends WP_Widget {
 	 * @param Array $instance Saved values for this widget from db.
 	 */
 	public function form( $instance ) {
+		$defaults = array(
+			'title' => __( 'Member Stations', 'sfpp' ),
+			'description' => 'The IPBS Indiana map displays all of the member stations located in Indiana. Click on a city to see its stations and coverage area.',
+		);
+		$instance = wp_parse_args( (array) $instance, $defaults );
+
 		?>
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'largo' ); ?></label>
 				<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" style="width:90%;" type="text" />
+			</p>
+
+			<p>
+				<label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php esc_html_e( 'Description:', 'largo' ); ?></label>
+				<textarea
+					id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"
+					name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"
+					style="width:90%;"
+					type="text"
+					rows="4"
+				><?php echo wp_kses_post( $instance['description'] ); ?></textarea>
 			</p>
 		<?php
 	}
@@ -52,6 +69,7 @@ class ipbs_member_map_widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		$instance['title'] = sanitize_text_field( $new_instance['title'] );
+		$instance['description'] = sanitize_textarea_field( $new_instance['description'] );
 
 		return $instance;
 	}
@@ -71,6 +89,11 @@ class ipbs_member_map_widget extends WP_Widget {
 		if ( ! empty( $title ) ) {
 			echo $args['before_title'] . wp_kses_post( $title ) . $args['after_title'];
 		}
+
+		if ( ! empty( $instance['description'] ) ) {
+			echo '<div class="description aligncenter">' . wp_kses_post( $instance['description'] ) . '</div>';
+		}
+
 
 		load_template( $template_file, false );
 
