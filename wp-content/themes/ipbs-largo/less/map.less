@@ -1,3 +1,6 @@
+@import (reference) "variables.less";
+@font-map-labels: @font-description;
+
 #map-frame{
   width: 100%;
   height: auto;
@@ -16,7 +19,7 @@
   }
   .coverage > g > text {
     opacity: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: @font-map-labels;
     font-weight: 700;
     font-size: 22px;
   }
@@ -30,7 +33,7 @@
   .label text {
     fill: #515350;
     text-transform: uppercase;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: @font-map-labels;
     font-weight: 700;
   }
   .label text {
@@ -43,7 +46,7 @@
   #legend {
     font-size: 16px;
     line-height: 16px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: @font-map-labels;
     color: #221F1F;
     border: 2px solid #d1d2d3;
     padding: 0.5em;
