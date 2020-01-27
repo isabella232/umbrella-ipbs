@@ -18,5 +18,6 @@ function ipbs_enqueue_styles(){
 		'typekit',
 		'https://use.typekit.net/wzh8ith.css'
 	);
+	wp_enqueue_style( 'dashicons' );
 }
 add_action( 'wp_enqueue_scripts', 'ipbs_enqueue_styles' );

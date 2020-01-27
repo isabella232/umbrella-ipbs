@@ -1,1 +1,69 @@
 @import (reference) "../../../less/variables.less";
+
+.widget_gce_widget {
+    .simcal-day-label {
+        display: none;
+    }
+    .simcal-day {
+        background: @lightgrey;
+        padding: @measure;
+        margin-bottom: @measure * 2!important;
+        .simcal-event-details {
+            .date {
+                color: @black;
+                font-weight: 600;
+                letter-spacing: 0.45px;
+                line-height: 2rem;
+                text-transform: uppercase;
+            }
+            h4{
+                margin-bottom: @measure - 1rem;
+                .simcal-event-title {
+                    font-size: 24px;
+                    line-height: 2rem;
+                    font-weight: 600;
+                }
+            }
+            .simcal-event-description {
+                margin-bottom: @measure;
+            }
+            .details {
+                border-top: 1px solid @grey;
+                padding-top: @measure;
+                .details-link {
+                    float: right;
+                    border-left: 1px solid @grey;
+                    a {
+                        padding-left: @measure;
+                        color: @darkred;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 2rem;
+                        letter-spacing: 0.45px;
+                        text-decoration: none;
+                        &::after {
+                            content: "\f345";
+                            font-family: 'dashicons';
+                            margin-left: 0.5rem;
+                            vertical-align: top;
+                            transition: margin-left 0.3s;
+                        }
+                        &:hover::after {
+                            margin-left: 1rem;
+                        }
+                        &:hover {
+                            color: @black;
+                        }
+                    }
+                    @media (max-width: 769px) {
+                        float: none;
+                        border: none;
+                        a {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
