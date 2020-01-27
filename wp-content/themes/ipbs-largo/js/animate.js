@@ -1,5 +1,6 @@
 var timeOut = [];
 var id = "";
+var $=jQuery;
 
 function opacityToZero() {
     var cities = document.querySelectorAll('#cities > g');
