@@ -1,1 +1,28 @@
 @import (reference) "../../../less/variables.less";
+
+.bottom-widget-area {
+
+	.largo-recent-posts {
+		@supports( display: grid ) {
+			ul li:nth-child( 1 ) { grid-area: a; }
+			ul li:nth-child( 2 ) { grid-area: b; }
+			ul li:nth-child( 3 ) { grid-area: c; }
+			@media ( min-width: 700px ) {
+				ul {
+					display: grid;
+					grid-template-areas:
+						"a a b"
+						"a a c"
+					;
+					grid-template-columns: 1fr 1fr 1fr;
+					grid-gap: @measure;
+				}
+			}
+			@media ( min-width: 1000px ) {
+				ul {
+					grid-gap: 2 * @measure;
+				}
+			}
+		}
+	}
+}
