@@ -87,6 +87,21 @@
                             color: @darkblack;
                             font-weight: 600;
                         }
+                        .dropdown-toggle {
+                            .caret {
+                                padding: 0 22px;
+                            }
+                        }
+                        .dropdown-menu {
+                            background: transparent;
+                            padding-top: @measure;
+                            li {
+                                &:last-of-type {
+                                    border-bottom: 0;
+                                    padding-bottom: 0;
+                                }
+                            }
+                        }
                     }
                 }
                 li {
