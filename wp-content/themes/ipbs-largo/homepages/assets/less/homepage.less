@@ -1,4 +1,123 @@
 @import (reference) "../../../less/variables.less";
+@border-color: @white;
+
+#top-story {
+	position: relative;
+}
+.inner {
+	background-color: @darkblue;
+	padding: @measure;
+	article {
+		border-bottom: 1px solid @border-color;
+		padding-bottom: 2 * @measure;
+		margin: 0;
+	}
+	.menu-container {
+		padding-top: 2 * @measure;
+	}
+
+	@media ( min-width: 770px ) {
+		display: flex;
+		flex-wrap: wrap;
+
+		article {
+			border-bottom: none;
+			flex: 1 1 400px;
+			padding-right: 1 * @measure;
+			padding-bottom: 0;
+		}
+		.menu-container {
+			flex: 0 1 150px;
+			border-left: 1px solid @border-color;
+			padding-left: 1 * @measure;
+			padding-top: 0;
+		}
+	}
+	@media ( min-width: 900px ) {
+		padding: 2 * @measure;
+	}
+
+	.has-post-thumbnail & {
+		@media ( min-width: 770px ) {
+			background-color: fadeout( @darkblue, 20% );
+
+			position: absolute;
+
+			bottom: @measure;
+			left: @measure;
+			right: @measure;
+		}
+		@media ( min-width: 900px ) {
+			bottom:  2 * @measure;
+			left:    2 * @measure;
+			right:   2 * @measure;
+		}
+	}
+
+	article {
+		h2 {
+			// https://fvsch.com/css-locks/
+			// y = mx + b
+			// m is 12px/920px = 6/460 = 3/230 = 0.013047...
+			// at x = 320px, y=28, so 28 - ( 320 * m ) = 28 - ( 320 * 3 / 230 ) = 23.826...
+			font-size: calc( ( 3 / 230* 100vw ) + 24px );
+			line-height: 1.3;
+			@media ( min-width: 1240px ) {
+				font-size: 40px;
+				line-height: 1.4
+			}
+			@media ( max-width: 320px ) {
+				font-size: 28px;
+			}
+		}
+		h2 a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.excerpt :last-child {
+			margin-bottom: 0;
+		}
+	}
+	.menu-container {
+		h3 {
+			font-weight: 700;
+			font-size: 14px;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		ul {
+			margin: 0;
+		}
+		li:first-child {
+			margin-top: 0.5 * @measure;
+		}
+		li {
+			list-style: none;
+			padding-top: 0.5 * @measure;
+			padding-bottom: 0.5 * @measure;
+			margin-bottom: 0;
+		}
+		li + li {
+			border-top: 1px solid @border-color;
+		}
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.inner.has-white-color {
+	a {
+		color: @white;
+		&:hover {
+			color: @white;
+		}
+	}
+}
 
 .widget_gce_widget {
     .simcal-day-label {

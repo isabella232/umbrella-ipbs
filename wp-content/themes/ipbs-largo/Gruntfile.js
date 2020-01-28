@@ -14,6 +14,7 @@ module.exports = function(grunt) {
 
     var cssLessFiles = {
       'css/child-style.css': 'less/style.less',
+      'css/map.css': 'less/map.less',
       'homepages/assets/css/homepage.css': 'homepages/assets/less/homepage.less',
     };
 
