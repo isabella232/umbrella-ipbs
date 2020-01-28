@@ -1,38 +1,45 @@
 <?php
-	global $shown_ids;
-	$topstory = largo_home_single_top();
-	$shown_ids[] = $topstory->ID;
+/**
+ * Homepage template for the IPBS layout.
+ * Contains:
+ * - Homepage top story, with image support
+ * - Quick Links menu
+ * - Homepage Bottom menu
+ */
+
+global $shown_ids;
+$topstory = largo_home_single_top();
+$shown_ids[] = $topstory->ID;
+$thumbnail = get_the_post_thumbnail( $topstory, 'full' );
 
 ?>
 <div class="">
-	<?php
-		// note that we're making a section containing a background image,
-		// which goes behind a transparent section that contains:
-		// - the article heading
-		// - the article excerpt
-		// - a "Quick links" menu for the site
-	?>
 	<div id="top-story" <?php post_class( '', $topstory->ID ); ?> >
-		<div class="post-image-top-term-container">
-			<?php
-				// The top term
-				largo_maybe_top_term();
-			?>
-			<a class="img" href="<?php echo esc_attr( get_permalink( $topstory ) ); ?>"><?php echo get_the_post_thumbnail( $topstory, 'large' ); ?></a>
-		</div>
-		<div class="inner">
+		<?php if ( ! empty( $thumbnail ) ) { ?>
+			<div class="post-image-top-term-container">
+				<a class="img" href="<?php echo esc_attr( get_permalink( $topstory ) ); ?>">
+					<?php echo $thumbnail; ?>
+				</a>
+			</div>
+		<?php } ?>
+		<div class="inner has-white-color">
 			<article <?php post_class( '', $topstory ); ?>>
-				<h2><a href="<?php the_permalink( $topstory ); ?>"><?php echo get_the_title( $topstory ); ?></a></h2>
+				<h2><a href="<?php the_permalink( $topstory ); ?>"><?php echo wp_kses_post( get_the_title( $topstory ) ); ?></a></h2>
 				<div class="excerpt">
 					<?php largo_excerpt( $topstory, 2 ); ?>
-					<a class="view-more-link" href="<?php the_permalink( $topstory ); ?>">Full Story</a>
 				</div>
 			</article>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => IPBS::menu_location,
-				) );
-			?>
+			<div class="menu-container">
+				<?php
+					echo '<h3 class="has-white-color">' . wp_kses_post( __( 'Quick Links', 'ipbs' ) ) . '</h3>';
+					wp_nav_menu(
+						array(
+						'theme_location' => IPBS::menu_location,
+						'after' => ' &gt;',
+						)
+					);
+				?>
+			</div>
 		</div>
 	</div>
 </div>
