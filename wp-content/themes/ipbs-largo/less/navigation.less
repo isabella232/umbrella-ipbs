@@ -1,0 +1,145 @@
+// sticky nav
+.sticky-nav-wrapper {
+    @media (min-width: 769px) {
+        display: none;
+    }
+    .sticky-nav-container {
+        .close {
+            display: none;
+        }
+        .open {
+            #header-extras {
+                .toggle-nav-bar {
+                    line-height: normal;
+                    .bars {
+                        display: none;
+                    }
+                    .close {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .sticky-navbar {
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: @measure 0;
+                .nav-right {
+                    order: 2;
+                    .toggle-nav-bar {
+                        &:hover {
+                            background: transparent;
+                        }
+                        .close {
+                            .dashicons {
+                                width: 40px;
+                                height: 40px;
+                                font-size: 40px;
+                                vertical-align: bottom;
+                            }
+                            p {
+                                text-transform: uppercase;
+                                line-height: normal;
+                                font-size: 12px;
+                                margin-bottom: 0;
+                                font-family: @font-header;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                .nav-left {
+                    .home-icon {
+                        img {
+                            max-width: 50%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-shelf {
+            background: @grey;
+            padding: @measure;
+            top: 106px;
+            ul {
+                margin: 0;
+                &.nav {
+                    margin-bottom: @measure + 0.5rem;
+                    li {
+                        padding: 0.5rem 0;
+                        a {
+                            color: @darkgrey;
+                            padding: 0;
+                        }
+                        .dropdown-toggle {
+                            .caret {
+                                padding: 0 22px;
+                            }
+                        }
+                        .dropdown-menu {
+                            background: transparent;
+                            padding-top: 1rem;
+                            li {
+                                padding: 0;
+                                a {
+                                    padding-left: 40px;
+                                }
+                                &:last-of-type {
+                                    border-bottom: 0;
+                                    padding-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.bottom-nav {
+                    li {
+                        padding: 1rem 0;
+                        border-top: 1px solid @darkgrey;
+                        &.menu-item-has-children.open {
+                            padding-bottom: 0;
+                        }
+                        &:last-of-type {
+                            border-bottom: 1px solid @darkgrey;
+                        }
+                        a {
+                            color: @darkblack;
+                            font-weight: 600;
+                        }
+                        .dropdown-toggle {
+                            .caret {
+                                padding: 0 22px;
+                            }
+                        }
+                        .dropdown-menu {
+                            background: transparent;
+                            padding-top: 1rem;
+                            li {
+                                padding: 0;
+                                &:last-of-type {
+                                    border-bottom: 0;
+                                    padding-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                li {
+                    a {
+                        text-transform: uppercase;
+                        font-family: @font-header;
+                        font-size: 13px;
+                        letter-spacing: 0.42px;
+                        line-height: 1.8rem;
+                        &:hover {
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
