@@ -116,4 +116,4 @@ function ipbs_block_colors_styles() {
 		echo '</style>';
 	}
 }
-add_action( 'wp_print_styles', 'ipbs_block_colors_styles' );
+add_action( 'wp_head', 'ipbs_block_colors_styles', 10 );
