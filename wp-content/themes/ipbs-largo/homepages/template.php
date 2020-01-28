@@ -36,6 +36,13 @@
 		</div>
 	</div>
 </div>
+<div class="impact-widget-area clearfix">
+	<div class="widget-area">
+		<?php
+			dynamic_sidebar( 'Homepage Impact' );
+		?>
+	</div>
+</div>
 <div class="bottom-widget-area clearfix">
 	<div class="widget-area">
 		<?php
