@@ -25,6 +25,7 @@ function largo_child_require_files() {
 		'/homepages/layout.php',
 		// widgets
 		'/inc/class-ipbs-member-map-widget.php',
+		'/inc/class-ipbs-member-stations-widget.php',
 	);
 
 	foreach ( $includes as $include ) {
