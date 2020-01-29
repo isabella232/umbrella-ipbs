@@ -19,3 +19,16 @@
         }
     }
 }
+
+.arrow {
+    &::after {
+        content: "\f345";
+        font-family: 'dashicons';
+        margin-left: 0.5rem;
+        vertical-align: bottom;
+        transition: margin-left 0.3s;
+    }
+    &:hover::after {
+        margin-left: 1rem;
+    }
+}
