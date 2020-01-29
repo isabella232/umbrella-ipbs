@@ -189,6 +189,12 @@
 					grid-template-columns: 1fr 1fr 1fr;
 					grid-gap: @measure;
 				}
+				li p {
+					display: none;
+				}
+				li:nth-child(1) p {
+					display: block;
+				}
 			}
 			@media ( min-width: 1000px ) {
 				ul {
