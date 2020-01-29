@@ -57,3 +57,11 @@ if ( $excerpt == 'num_sentences' ) {
 		<p><?php echo get_the_excerpt(); ?></p>
 	<?php
 }
+
+// readmore link
+
+printf(
+	'<a href="%1$s" class="morelink">%2$s</a>',
+	get_permalink(),
+	__( 'Read more', 'ipbs' )
+);
