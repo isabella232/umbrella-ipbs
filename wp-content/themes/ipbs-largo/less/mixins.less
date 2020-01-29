@@ -13,7 +13,24 @@
 .homepage-shadow() {
   box-shadow: 0px 0px 16px @box-shadow-black;
 }
-.btn() {
-  // placeholder until https://github.com/INN/umbrella-ipbs/pull/71
-  background-color: @darkred;
-};
+.btn {
+    background: @red;
+    color: @white;
+    font-weight: 600;
+    border-radius: 20px!important;
+    padding: 10px 40px!important;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+    &:hover {
+        background: @darkred;
+    }
+    &.btn-blue {
+        background: @blue;
+        &:hover {
+            background: @darkblue;
+        }
+    }
+}
