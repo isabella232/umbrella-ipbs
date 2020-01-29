@@ -38,7 +38,7 @@ add_action( 'init', function() {
 		'core/group',
 		array(
 			'name' => 'border-top-orange',
-			'label' => __( 'orange Top Border', 'ipbs' ),
+			'label' => __( 'Orange Top Border', 'ipbs' ),
 		)
 	);
 } );
