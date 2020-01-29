@@ -152,7 +152,7 @@
 			}
 
 			padding: @measure;
-			@media ( min-width: 900px ) {
+			@media ( min-width: 1000px ) {
 				padding: 2 * @measure;
 			}
 		}
@@ -172,7 +172,7 @@
 		}
 
 		h5 {
-			font-size: 32px;
+			font-size: 20px;
 			margin-top: 1em;
 			line-height: 1.5;
 			a {
@@ -199,10 +199,15 @@
 				margin-left: 1rem;
 			}
 		}
-		li:nth-child(1) .morelink {
-			.btn();
-			&::after {
-				display: none;
+		li:nth-child(1) {
+			h5 {
+				font-size: 24px;
+			}
+			.morelink {
+				.btn();
+				&::after {
+					display: none;
+				}
 			}
 		}
 
@@ -223,8 +228,16 @@
 				li p {
 					display: none;
 				}
-				li:nth-child(1) p {
-					display: block;
+				h5 {
+					font-size: 24px;
+				}
+				li:nth-child(1) {
+					h5 {
+						font-size: 32px;
+					}
+					p {
+						display: block;
+					}
 				}
 				li,
 				li + li{
