@@ -15,6 +15,7 @@ module.exports = function(grunt) {
     var cssLessFiles = {
       'css/child-style.css': 'less/style.less',
       'css/map.css': 'less/map.less',
+      'blocks/core-group/editor.css': 'blocks/core-group/editor.less',
       'homepages/assets/css/homepage.css': 'homepages/assets/less/homepage.less',
     };
 
@@ -39,6 +40,7 @@ module.exports = function(grunt) {
         less: {
           files: [
             'less/*.less',
+            'blocks/**/*.less',
             'homepages/assets/less/*.less',
           ],
           tasks: [
