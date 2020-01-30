@@ -34,8 +34,7 @@ $thumbnail = get_the_post_thumbnail( $topstory, 'full' );
 					echo '<h3 class="has-white-color">' . wp_kses_post( __( 'Quick Links', 'ipbs' ) ) . '</h3>';
 					wp_nav_menu(
 						array(
-						'theme_location' => IPBS::menu_location,
-						'after' => ' &gt;',
+							'theme_location' => IPBS::menu_location,
 						)
 					);
 				?>
