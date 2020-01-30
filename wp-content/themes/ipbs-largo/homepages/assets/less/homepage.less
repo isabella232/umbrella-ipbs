@@ -168,6 +168,11 @@
 		img {
 			.homepage-shadow();
 			padding: 0;
+			display: block;
+		}
+		li {
+			// so the shadow may overflow the bounds of the li
+			overflow: visible;
 		}
 		li a:first-child {
 			// wraps the image
@@ -198,6 +203,8 @@
 				font-size: 24px;
 			}
 			.morelink {
+				display: inline-block;
+				line-height: 1;
 				.btn();
 				&::after {
 					display: none;
