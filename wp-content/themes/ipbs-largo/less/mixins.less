@@ -35,3 +35,20 @@
         }
     }
 }
+.arrow {
+    position: relative;
+    padding-right: 0.5rem;
+    &::after {
+        width: 1ch;
+        position: relative;
+        content: "\f345";
+        font-family: 'dashicons';
+        margin-left: 0.5rem;
+        vertical-align: bottom;
+        transition: left 0.3s;
+        left: 0;
+    }
+    &:hover::after {
+        left: 10px;
+    }
+}

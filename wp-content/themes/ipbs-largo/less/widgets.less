@@ -3,3 +3,60 @@
         .widgettitle-mixin();
     }
 }
+
+// member stations widget
+.widget.ipbs-member-stations {
+    margin-bottom: @measure * 2;
+    ul {
+        @media (min-width: 1000px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid @grey;
+            padding-top: @measure;
+            padding-bottom: @measure;
+            margin-bottom: 0;
+            &:not(:nth-child(3n)) {
+                border-right: 1px solid @grey;
+            }
+            img {
+                max-width: 150px;
+                max-height: 150px;
+            }
+            .member-stations-content {
+                margin-left: @measure;
+                h4 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 2rem;
+                    margin-bottom: 0;
+                }
+                h5 {
+                    a {
+                        color: @darkred;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: 0.7px;
+                        line-height: 1.7rem;
+                        text-decoration: none;
+                        .arrow;
+                        &:hover {
+                            color: @black;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 999px) {
+                padding-left: 0;
+                &:not(:nth-child(3n)) {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+}

@@ -325,3 +325,63 @@
         }
     }
 }
+.widget_gce_widget {
+    .simcal-day-label {
+        display: none;
+    }
+    .simcal-day {
+        background: @lightgrey;
+        padding: @measure;
+        margin-bottom: @measure * 2!important;
+        .simcal-event-details {
+            .date {
+                color: @black;
+                font-weight: 600;
+                letter-spacing: 0.45px;
+                line-height: 2rem;
+                text-transform: uppercase;
+            }
+            h4{
+                margin-bottom: @measure - 1rem;
+                .simcal-event-title {
+                    font-size: 24px;
+                    line-height: 2rem;
+                    font-weight: 600;
+                }
+            }
+            .simcal-event-description {
+                margin-bottom: @measure;
+            }
+            .details {
+                border-top: 1px solid @grey;
+                padding-top: @measure;
+                .details-link {
+                    a {
+                        color: @darkred;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 2rem;
+                        letter-spacing: 0.45px;
+                        text-decoration: none;
+                        @media (min-width: 770px) {
+                            border-left: 1px solid @grey;
+                            padding-left: @measure;
+                            float: right;
+                        }
+                        .arrow;
+                        &:hover {
+                            color: @black;
+                        }
+                    }
+                    @media (max-width: 769px) {
+                        float: none;
+                        border: none;
+                        a {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
