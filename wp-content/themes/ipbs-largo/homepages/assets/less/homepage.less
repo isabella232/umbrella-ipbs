@@ -16,6 +16,9 @@
 	.menu-container {
 		padding-top: 2 * @measure;
 	}
+	.menu-item {
+		.arrow();
+	}
 
 	@media ( min-width: 770px ) {
 		display: flex;
@@ -32,9 +35,6 @@
 			border-left: 1px solid @border-color;
 			padding-left: 1 * @measure;
 			padding-top: 0;
-		}
-		.menu-item {
-			.arrow();
 		}
 	}
 	@media ( min-width: 900px ) {
