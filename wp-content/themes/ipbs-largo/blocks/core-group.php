@@ -7,12 +7,20 @@
  */
 
 add_action( 'init', function() {
+	wp_register_script(
+		'ipbs-block-core-group-filters',
+		get_stylesheet_directory_uri() . '/blocks/core-group/modifications.js',
+		array( 'wp-editor', 'wp-hooks' ),
+		filemtime( get_stylesheet_directory() . '/blocks/core-group/modifications.js' )
+	);
+
 	wp_register_style(
 		'ipbs-block-core-group-editor',
 		get_stylesheet_directory_uri() . '/blocks/core-group/editor.css',
 		null,
 		filemtime( get_stylesheet_directory() . '/blocks/core-group/editor.css' )
 	);
+
 	register_block_style(
 		'core/group',
 		array(
@@ -45,4 +53,8 @@ add_action( 'init', function() {
 
 add_action( 'enqueue_block_editor_assets', function() {
 	wp_enqueue_style( 'ipbs-block-core-group-editor' );
+});
+
+add_action( 'enqueue_block_editor_assets', function() {
+	wp_enqueue_script( 'ipbs-block-core-group-filters' );
 });
