@@ -16,6 +16,9 @@
 	.menu-container {
 		padding-top: 2 * @measure;
 	}
+	.menu-item {
+		.arrow();
+	}
 
 	@media ( min-width: 770px ) {
 		display: flex;
@@ -120,6 +123,137 @@
 	}
 }
 
+.bottom-widget-area {
+
+	.largo-recent-posts {
+		// colorway to match the mockup
+		&.default {
+			color: white;
+			background-color: @darkblue;
+			background-image:
+				linear-gradient( to bottom, @white, @white),
+				url( '../../../images/blue-bkg.svg' )
+			;
+			background-size:
+				100% 14rem,
+				cover
+			;
+			background-position:
+				top center,
+				center center,
+			;
+			background-repeat:
+				no-repeat,
+				no-repeat
+			;
+
+			a {
+				color: @white;
+				&:hover {
+					color: @white;
+				}
+			}
+
+			padding: @measure;
+			@media ( min-width: 1000px ) {
+				padding: 2 * @measure;
+			}
+		}
+
+		.widgettitle {
+			.widgettitle-mixin();
+			text-align: center;
+		}
+
+		img {
+			.homepage-shadow();
+			padding: 0;
+			display: block;
+		}
+		li {
+			// so the shadow may overflow the bounds of the li
+			overflow: visible;
+		}
+		li a:first-child {
+			// wraps the image
+			display: block;
+		}
+
+		h5 {
+			font-size: 20px;
+			margin-top: 1em;
+			line-height: 1.5;
+			a {
+				text-decoration: none;
+			}
+		}
+
+		li + li {
+			margin-top: 2 * @measure;
+		}
+
+		li .morelink {
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 14px;
+			.arrow();
+		}
+		li:nth-child(1) {
+			h5 {
+				font-size: 24px;
+			}
+			.morelink {
+				display: inline-block;
+				line-height: 1;
+				.btn();
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		@supports( display: grid ) {
+			ul li:nth-child( 1 ) { grid-area: a; }
+			ul li:nth-child( 2 ) { grid-area: b; }
+			ul li:nth-child( 3 ) { grid-area: c; }
+			@media ( min-width: 700px ) {
+				ul {
+					display: grid;
+					grid-template-areas:
+						"a a b"
+						"a a c"
+					;
+					grid-template-columns: 1fr 1fr 1fr;
+					grid-gap: @measure;
+				}
+				li p {
+					display: none;
+				}
+				h5 {
+					font-size: 24px;
+				}
+				li:nth-child(1) {
+					h5 {
+						font-size: 32px;
+					}
+					p {
+						display: block;
+					}
+					margin-bottom: 0.5em;
+				}
+				li,
+				li + li{
+					margin: 0;
+				}
+			}
+			@media ( min-width: 1000px ) {
+				ul {
+					grid-gap: 2 * @measure;
+				}
+			}
+		}
+	}
+}
 .impact-widget-area {
     margin-top: @measure;
     padding-top: @measure * 2;
@@ -187,7 +321,7 @@
             }
             img {
                 width: 100%;
-                box-shadow: 0px 0px 16px @box-shadow-black;
+                .homepage-shadow();
             }
         }
     }
