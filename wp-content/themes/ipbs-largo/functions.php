@@ -21,6 +21,7 @@ function largo_child_require_files() {
 		'/inc/enqueue.php',
 		'/inc/private_content_sharing_shortcode.php',
 		'/inc/block-color-palette.php',
+		'/inc/post-templates.php',
 		// homepage
 		'/homepages/layout.php',
 		// widgets
