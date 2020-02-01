@@ -21,7 +21,7 @@ function ipbs_filter_largo_options_custom_templates( $options ) {
 				isset( $options[$key]['options'] )
 				&& is_array( $options[$key]['options'] )
 			) {
-				$options[$key]['options']['ipbs'] = 'IPBS Right-Offset Column';
+				$options[$key]['options']['single-ipbs.php'] = 'IPBS Right-Offset Column';
 			}
 		}
 	}
