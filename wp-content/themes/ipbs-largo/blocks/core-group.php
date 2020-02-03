@@ -21,34 +21,37 @@ add_action( 'init', function() {
 		filemtime( get_stylesheet_directory() . '/blocks/core-group/editor.css' )
 	);
 
-	register_block_style(
-		'core/group',
-		array(
-			'name' => 'border-top-green',
-			'label' => __( 'Green Top Border', 'ipbs' ),
-		)
-	);
-	register_block_style(
-		'core/group',
-		array(
-			'name' => 'border-top-blue',
-			'label' => __( 'Blue Top Border', 'ipbs' ),
-		)
-	);
-	register_block_style(
-		'core/group',
-		array(
-			'name' => 'border-top-red',
-			'label' => __( 'Red Top Border', 'ipbs' ),
-		)
-	);
-	register_block_style(
-		'core/group',
-		array(
-			'name' => 'border-top-orange',
-			'label' => __( 'Orange Top Border', 'ipbs' ),
-		)
-	);
+	// ugh, wordpress 5.2
+	if ( function_exists( 'register_block_style' ) ) {
+		register_block_style(
+			'core/group',
+			array(
+				'name' => 'border-top-green',
+				'label' => __( 'Green Top Border', 'ipbs' ),
+			)
+		);
+		register_block_style(
+			'core/group',
+			array(
+				'name' => 'border-top-blue',
+				'label' => __( 'Blue Top Border', 'ipbs' ),
+			)
+		);
+		register_block_style(
+			'core/group',
+			array(
+				'name' => 'border-top-red',
+				'label' => __( 'Red Top Border', 'ipbs' ),
+			)
+		);
+		register_block_style(
+			'core/group',
+			array(
+				'name' => 'border-top-orange',
+				'label' => __( 'Orange Top Border', 'ipbs' ),
+			)
+		);
+	}
 } );
 
 add_action( 'enqueue_block_editor_assets', function() {

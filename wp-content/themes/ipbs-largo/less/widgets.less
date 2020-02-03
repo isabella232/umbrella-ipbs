@@ -60,3 +60,27 @@
         }
     }
 }
+
+.widget {
+    .video-widget {
+        display: flex;
+        align-items: center;
+        .video-widget-content-right {
+            iframe {
+                width: 100%;
+                height: 350px;
+            }
+        }
+        @media (max-width: 769px) {
+            flex-direction: column;
+            .video-widget-content-left {
+                text-align: center;
+            }
+            .video-widget-content-right,
+            .video-widget-content-left {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+}

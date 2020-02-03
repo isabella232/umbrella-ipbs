@@ -39,3 +39,39 @@ function largo_child_require_files() {
 add_action( 'after_setup_theme', 'largo_child_require_files' );
 
 register_nav_menu('main-nav-bottom', 'Main Navigation Bottom');
+
+/**
+ * Add a custom archive partial for the jobs CPT
+ * 
+ * @param str $partial Required, the default partial in this context
+ * @param str $post_type Required, the given post’s post type
+ * @param str $context Required, the context of this partial
+ * 
+ * @return @partial The default partial for this context
+ */
+function add_ipbs_jobs_custom_partial( $partial, $post_type, $context ) {
+
+	if( 'job' === $post_type ) {
+		if( 'archive' === $context ) {
+			$partial = 'archive-job';
+		}
+	}
+	return $partial;
+	
+}
+add_filter( 'largo_partial_by_post_type', 'add_ipbs_jobs_custom_partial', 10, 3 );
+
+/**
+ * Update the default 'Jobs' title for the jobs CPT archive
+ * 
+ * @param str $title The archive title
+ * 
+ * @return str $title The archive title
+ */
+function update_ipbs_jobs_archive_title( $title ){
+
+	$title = 'Job Boards';
+	return $title;
+
+}
+add_filter( 'largo_archive_job_title', 'update_ipbs_jobs_archive_title' );

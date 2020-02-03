@@ -1,0 +1,100 @@
+.post-type-archive {
+    &.post-type-archive-job {
+        .archive-background {
+            border-bottom: 0;
+            .rss-link {
+                display: none;
+            }
+        }
+        #sidebar {
+            display: none;
+        }
+        .stories {
+            width: 100%;
+            article {
+                background: @lightgrey;
+                padding: @measure * 2;
+                margin-bottom: @measure * 2!important;
+                border-bottom: 0;
+                .entry-content {
+                    display: flex;
+                    margin-bottom: 0;
+                    .left-job-content {
+                        flex-grow: 0;
+                        flex-basis: 30%;
+                        padding-right: @measure;
+                        border-right: 1px solid @grey;
+                        .job-location {
+                            border-bottom: 1px solid @grey;
+                            margin-bottom: @measure;
+                            p {
+                                margin-bottom: @measure;
+                            }
+                        }
+                        h6 {
+                            color: @black;
+                            text-transform: uppercase;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .right-job-content {
+                        flex-grow: 0;
+                        flex-basis: 100%;
+                        padding-left: @measure;
+                        padding-right: @measure;
+                        .publish-date {
+                            color: @black;
+                            font-weight: 600;
+                            letter-spacing: 0.45px;
+                            line-height: 2rem;
+                            text-transform: uppercase;
+                        }
+                        h4 {
+                            a {
+                                color: @blue;
+                                text-decoration: none;
+                            }
+                        }
+                        .excerpt {
+                            border-bottom: 1px solid @grey;
+                            padding-bottom: @measure;
+                            margin-bottom: @measure;
+                        }
+                        .job-details {
+                            border-left: 1px solid @grey;
+                            padding-left: @measure;
+                            color: @darkred;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 2rem;
+                            letter-spacing: 0.45px;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            float: right;
+                            .arrow;
+                            &:hover {
+                                color: @black;
+                            }
+                        }
+                    }
+                    @media (max-width: 769px) {
+                        flex-direction: column;
+                        .left-job-content {
+                            margin-bottom: @measure;
+                            border-right: 0;
+                            padding-right: 0;
+                        }
+                        .right-job-content {
+                            padding: 0;
+                            .job-details {
+                                float: none;
+                                border-left: 0;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
