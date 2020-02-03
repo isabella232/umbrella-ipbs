@@ -31,6 +31,7 @@
 		> * {
 			grid-column-start: main-start;
 			grid-column-end: main-end;
+			align-self: start;
 		}
 		.alignleft {
 			grid-column-start: left-start;
@@ -60,8 +61,8 @@
 			}
 			@media ( min-width: 1170px ) {
 				// this depends on #page { box-sizing: border-box }
-				margin-left: calc( ( 100vw - 1170px ) / -2 - ( 1170px * 0.025 ) );
-				margin-right: calc( ( 100vw - 1170px ) / -2 - ( 1170px * 0.025 ) );
+				margin-left: calc( ( ( 100vw - 1170px ) / -2 ) - 2.5vw );
+				margin-right: calc( ( ( 100vw - 1170px ) / -2 ) - 2.5vw );
 			}
 		}
 	}
