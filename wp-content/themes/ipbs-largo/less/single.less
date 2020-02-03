@@ -11,3 +11,58 @@
         }
     }
 }
+// https://github.com/INN/umbrella-ipbs/issues/41
+.single-ipbs {
+	#page {
+		box-sizing: border-box; // make my life simpler
+	}
+	.entry-content {
+		@media ( min-width: 700px ) {
+			display: grid;
+			grid-template-columns: 
+				[left-start] 5fr [left-end] @measure [main-start] 7fr [main-end]
+			;
+		}
+		@media ( min-width: 1000px ) {
+			grid-template-columns:
+				[left-start] 5fr [left-end] ( 2 * @measure ) [main-start] 7fr [main-end]
+			;
+		}
+		> * {
+			grid-column-start: main-start;
+			grid-column-end: main-end;
+		}
+		.alignleft {
+			grid-column-start: left-start;
+			grid-column-end: left-end;
+			box-sizing: border-box;
+		}
+		.alignwide {
+			grid-column-start: left-start;
+			grid-column-end: main-end;
+			margin-left: 0;
+			margin-right: 0;
+			box-sizing: border-box;
+		}
+		.alignfull {
+			grid-column-start: left-start;
+			grid-column-end: main-end;
+			margin-left: 0;
+			margin-right: 0;
+			transform: unset;
+			box-sizing: border-box;
+
+			margin-left: -2.5vw;
+			margin-right: -2.5vw;
+			@media ( max-width: 768px ) {
+				margin-left: -2.5vw;
+				margin-right: -2.5vw;
+			}
+			@media ( min-width: 1170px ) {
+				// this depends on #page { box-sizing: border-box }
+				margin-left: calc( ( 100vw - 1170px ) / -2 - ( 1170px * 0.025 ) );
+				margin-right: calc( ( 100vw - 1170px ) / -2 - ( 1170px * 0.025 ) );
+			}
+		}
+	}
+}

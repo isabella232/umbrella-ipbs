@@ -3,12 +3,15 @@
  * Single Post Template: IPBS Right-Offset Column
  * Template Name: IPBS Right-Offset Column
  * Description: Left-aligned blocks appear on the left in their own column
+ *
+ * This uses partials/content-ipbs.php for both pages and posts.
+ * @since Largo 0.6.4
  */
 
 global $shown_ids;
 
 add_filter( 'body_class', function( $classes ) {
-	$classes[] = 'right-offset';
+	$classes[] = 'single-ipbs';
 	return $classes;
 } );
 
@@ -25,7 +28,7 @@ get_header();
 
 			echo '<h1>SINGLE LEFT BLOCK COLUMN</h1>';
 
-			get_template_part( 'partials/content', $partial );
+			get_template_part( 'partials/content', 'ipbs' );
 
 			if ( $partial === 'single' ) {
 
