@@ -10,25 +10,27 @@
 global $shown_ids;
 $topstory = largo_home_single_top();
 $shown_ids[] = $topstory->ID;
-$thumbnail = get_the_post_thumbnail( $topstory, 'full' );
 
 ?>
 <div class="">
 	<div id="top-story" <?php post_class( '', $topstory->ID ); ?> >
-		<?php if ( ! empty( $thumbnail ) ) { ?>
-			<div class="post-image-top-term-container">
-				<a class="img" href="<?php echo esc_attr( get_permalink( $topstory ) ); ?>">
-					<?php echo $thumbnail; ?>
-				</a>
+		<?php if (true ) { ?>
+			<div class="post-image-top-term-container" aria-hidden="true">
+				<img
+					src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/homepage-halved.jpg' ); ?>"
+					class="attachment-full size-full wp-post-image"
+					srcset="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/homepage-halved.jpg' ); ?> 525w,
+						<?php echo esc_url( get_stylesheet_directory_uri() . '/images/homepage.jpg' ); ?> 1050w"
+					sizes="(max-width: 1170px) 100vw, 1170px"
+					width="1170"
+					height="780"
+				>
 			</div>
 		<?php } ?>
 		<div class="inner has-white-color">
-			<article <?php post_class( '', $topstory ); ?>>
-				<h2><a href="<?php the_permalink( $topstory ); ?>"><?php echo wp_kses_post( get_the_title( $topstory ) ); ?></a></h2>
-				<div class="excerpt">
-					<?php largo_excerpt( $topstory, 2 ); ?>
-				</div>
-			</article>
+			<?php
+				dynamic_sidebar( 'Homepage Top' );
+			?>
 			<div class="menu-container">
 				<?php
 					echo '<h3 class="has-white-color">' . wp_kses_post( __( 'Quick Links', 'ipbs' ) ) . '</h3>';

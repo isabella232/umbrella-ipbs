@@ -8,7 +8,7 @@
 .inner {
 	background-color: @darkblue;
 	padding: @measure;
-	article {
+	.widget {
 		border-bottom: 1px solid @border-color;
 		padding-bottom: 2 * @measure;
 		margin: 0;
@@ -24,7 +24,7 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		article {
+		.widget {
 			border-bottom: none;
 			flex: 1 1 400px;
 			padding-right: 1 * @measure;
@@ -58,14 +58,18 @@
 		}
 	}
 
-	article {
-		h2 {
+	.widget {
+		.widgettitle {
 			// https://fvsch.com/css-locks/
 			// y = mx + b
 			// m is 12px/920px = 6/460 = 3/230 = 0.013047...
 			// at x = 320px, y=28, so 28 - ( 320 * m ) = 28 - ( 320 * 3 / 230 ) = 23.826...
 			font-size: calc( ( 3 / 230* 100vw ) + 24px );
 			line-height: 1.3;
+			text-align: left;
+			text-transform: none;
+			color: inherit;
+			margin-bottom: 0.5em;
 			@media ( min-width: 1240px ) {
 				font-size: 40px;
 				line-height: 1.4
@@ -74,13 +78,14 @@
 				font-size: 28px;
 			}
 		}
-		h2 a {
+		.widgettitle a {
+			color: inherit;
 			text-decoration: none;
 			&:hover {
 				text-decoration: underline;
 			}
 		}
-		.excerpt :last-child {
+		.textwidget :last-child {
 			margin-bottom: 0;
 		}
 	}

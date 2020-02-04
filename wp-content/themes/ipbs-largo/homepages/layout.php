@@ -27,6 +27,7 @@ class IPBS extends Homepage {
 				),
 			),
 			'sidebars' => array(
+				'Homepage Top (Appears within the blue box at the top of the homepage)',
 				'Homepage Impact (The 3 row widget area beneath the top featured area)',
 				'Homepage Bottom (The bottom area of the homepage, after the top and featured stories)',
 			),
