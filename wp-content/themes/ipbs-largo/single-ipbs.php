@@ -26,8 +26,6 @@ get_header();
 
 			$partial = ( is_page() ) ? 'page' : 'single';
 
-			echo '<h1>SINGLE LEFT BLOCK COLUMN</h1>';
-
 			get_template_part( 'partials/content', 'ipbs' );
 
 			if ( $partial === 'single' ) {
