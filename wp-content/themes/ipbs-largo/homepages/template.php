@@ -28,12 +28,9 @@ $shown_ids[] = $topstory->ID;
 			</div>
 		<?php } ?>
 		<div class="inner has-white-color">
-			<article <?php post_class( '', $topstory ); ?>>
-				<h2><a href="<?php the_permalink( $topstory ); ?>"><?php echo wp_kses_post( get_the_title( $topstory ) ); ?></a></h2>
-				<div class="excerpt">
-					<?php largo_excerpt( $topstory, 2 ); ?>
-				</div>
-			</article>
+			<?php
+				dynamic_sidebar( 'Homepage Top' );
+			?>
 			<div class="menu-container">
 				<?php
 					echo '<h3 class="has-white-color">' . wp_kses_post( __( 'Quick Links', 'ipbs' ) ) . '</h3>';
