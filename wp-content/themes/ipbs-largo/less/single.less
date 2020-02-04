@@ -15,6 +15,13 @@
 .single-ipbs {
 	#page {
 		box-sizing: border-box; // make my life simpler
+		@media ( min-width: 769px ) and ( max-width: 979px ) {
+			padding: 0 2.5%;
+		}
+		@media screen and ( min-width: 1170px ) {
+			padding: 0 @measure;
+			margin: 0 auto;
+		}
 	}
 	.entry-content {
 		box-sizing: border-box;
@@ -77,7 +84,7 @@
 				margin-left: calc( -1 * ( @left + @measure ) );
 			}
 			.alignfull {
-				margin-left: calc( -1 * (  @left + @measure + ( ( 100vw - 1170px )/2 )  ) );
+				margin-left: calc( -1 * (  @left + @measure + @measure + ( ( 100vw - 1170px )/2 )  ) );
 			}
 		}
 	}
