@@ -8,13 +8,11 @@
  */
 
 global $shown_ids;
-$topstory = largo_home_single_top();
-$shown_ids[] = $topstory->ID;
 
 ?>
 <div class="">
-	<div id="top-story" <?php post_class( '', $topstory->ID ); ?> >
-		<?php if (true ) { ?>
+	<div id="top-story" class="has-post-thumbnail" >
+		<?php if ( true ) { ?>
 			<div class="post-image-top-term-container" aria-hidden="true">
 				<img
 					src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/homepage-halved.jpg' ); ?>"
