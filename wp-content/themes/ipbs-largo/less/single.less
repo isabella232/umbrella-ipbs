@@ -11,3 +11,87 @@
         }
     }
 }
+// https://github.com/INN/umbrella-ipbs/issues/41
+.single-ipbs {
+	#page {
+		box-sizing: border-box; // make my life simpler
+		@media ( min-width: 769px ) and ( max-width: 979px ) {
+			padding: 0 2.5%;
+		}
+		@media screen and ( min-width: 1170px ) {
+			padding: 0 @measure;
+			margin: 0 auto;
+		}
+	}
+	.entry-content {
+		box-sizing: border-box;
+		position: relative;
+
+		.alignleft {
+			box-sizing: border-box;
+		}
+		.alignwide {
+			box-sizing: border-box;
+		}
+		.alignfull {
+			margin-left: 0;
+			margin-right: 0;
+			transform: unset;
+			box-sizing: border-box;
+
+			width: 100vw;
+
+			margin-left: -2.5vw;
+			margin-right: -2.5vw;
+		}
+
+		@media ( max-width: 699px ) {
+			.alignwide {
+				margin-left: -2.5vw;
+				margin-right: -2.5vw;
+			}
+		}
+		@media ( min-width: 700px ) {
+			@width: ( 95vw );
+			@left: calc( ( @width - @measure ) * 5/12);
+			padding-left: calc( @left + @measure );
+			> * {
+			}
+			.alignleft {
+				width: @left;
+				float: left;
+			}
+			.alignwide {
+				width: calc( @left + @measure + 100% );
+				margin-right: 0;
+			}
+			.alignleft, .alignwide {
+				margin-left: calc( -1 * ( @left + @measure ) );
+			}
+			.alignfull {
+				margin-left: calc( -1 * ( @left + @measure + 2.5vw ) );
+			}
+		}
+		@media ( min-width: 1170px ) {
+			@width: 1170px;
+			@left: calc( ( @width - @measure ) * 5/12);
+			padding-left: calc( @left + @measure );
+			> * {
+			}
+			.alignleft {
+				width: @left;
+				float: left;
+			}
+			.alignwide {
+				width: calc( @left + @measure + 100% );
+				margin-right: 0;
+			}
+			.alignleft, .alignwide {
+				margin-left: calc( -1 * ( @left + @measure ) );
+			}
+			.alignfull {
+				margin-left: calc( -1 * (  @left + @measure + @measure + ( ( 100vw - 1170px )/2 )  ) );
+			}
+		}
+	}
+}
