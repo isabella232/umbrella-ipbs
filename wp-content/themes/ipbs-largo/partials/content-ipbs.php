@@ -21,11 +21,13 @@
 					wp_kses_post( $subtitle )
 				);
 			}
-		?>
 
-		<h5 class="byline"><?php largo_byline( true, false, get_the_ID() ); ?></h5>
+			if ( is_single() ) {
+				?>
+					<h5 class="byline"><?php largo_byline( true, false, get_the_ID() ); ?></h5>
+				<?php
+			}
 
-		<?php
 			if ( is_single() && ! of_get_option( 'single_social_icons' ) == false ) {
 				largo_post_social_links();
 			}
