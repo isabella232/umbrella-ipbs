@@ -16,11 +16,22 @@
 	#page {
 		box-sizing: border-box; // make my life simpler
 		@media ( min-width: 769px ) and ( max-width: 979px ) {
-			padding: 0 2.5%;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
 		}
 		@media screen and ( min-width: 1170px ) {
-			padding: 0 @measure;
-			margin: 0 auto;
+			padding-left: @measure;
+			padding-right: @measure;
+			margin-top: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		padding-bottom: 2 * @measure;
+		margin-bottom: 2 * @measure;
+		border-bottom: 1px solid @grey;
+		#main {
+			margin-bottom: 0;
 		}
 	}
 	header + .entry-content {
@@ -29,6 +40,11 @@
 	.entry-content {
 		box-sizing: border-box;
 		position: relative;
+		margin-bottom: 0;
+
+		> :last-child {
+			margin-bottom: 0;
+		}
 
 		.alignleft {
 			box-sizing: border-box;
