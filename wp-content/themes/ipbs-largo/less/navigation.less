@@ -143,3 +143,13 @@
         }
     }
 }
+// padding for the page so the sticky nav does not overlap 
+@media (min-width: 769px) {
+	#page {
+		// where these numbers come from:
+		// #sticky-nav .container: padding-top: @measure; padding-bottom: @measure;
+		// .navbar.sticky-navbar .btn-navbar: line-height: 56px;
+		// .btn: padding: 10px 40px !important;
+		padding-top: calc( @measure + @measure + 56px + 10px + 10px );
+	}
+}
