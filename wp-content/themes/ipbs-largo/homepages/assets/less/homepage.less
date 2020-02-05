@@ -295,6 +295,7 @@
             grid-gap: @measure + 1rem;
             padding: 0 @measure * 2;
             .widget {
+				margin-bottom: 0!important;
                 &:first-of-type {
                     grid-area: title;
                     margin-bottom: 0;
@@ -332,13 +333,16 @@
     }
 }
 .widget_gce_widget {
+	margin-bottom: 0!important;
     .simcal-day-label {
         display: none;
     }
     .simcal-day {
         background: @lightgrey;
         padding: @measure;
-        margin-bottom: @measure * 2!important;
+        &:not(:last-of-type) {
+			margin-bottom: @measure * 2!important;
+		}
         .simcal-event-details {
             .date {
                 color: @black;
