@@ -56,29 +56,32 @@
 		}
 		@media ( min-width: 700px ) {
 			@width: ( 95vw );
-			@left: calc( ( @width - @measure ) * 5/12);
-			padding-left: calc( @left + @measure );
+			@gap: 2 * @measure;
+			@left: calc( ( @width - @gap ) * 5/12);
+			padding-left: calc( @left + @gap );
 			> * {
 			}
 			.alignleft {
 				width: @left;
 				float: left;
+				clear: left;
 			}
 			.alignwide {
-				width: calc( @left + @measure + 100% );
+				width: calc( @left + @gap + 100% );
 				margin-right: 0;
 			}
 			.alignleft, .alignwide {
-				margin-left: calc( -1 * ( @left + @measure ) );
+				margin-left: calc( -1 * ( @left + @gap ) );
 			}
 			.alignfull {
-				margin-left: calc( -1 * ( @left + @measure + 2.5vw ) );
+				margin-left: calc( -1 * ( @left + @gap + 2.5vw ) );
 			}
 		}
 		@media ( min-width: 1170px ) {
 			@width: 1170px;
-			@left: calc( ( @width - @measure ) * 5/12);
-			padding-left: calc( @left + @measure );
+			@gap: 2 * @measure;
+			@left: calc( ( @width - @gap ) * 5/12);
+			padding-left: calc( @left + @gap );
 			> * {
 			}
 			.alignleft {
@@ -86,14 +89,14 @@
 				float: left;
 			}
 			.alignwide {
-				width: calc( @left + @measure + 100% );
+				width: calc( @left + @gap + 100% );
 				margin-right: 0;
 			}
 			.alignleft, .alignwide {
-				margin-left: calc( -1 * ( @left + @measure ) );
+				margin-left: calc( -1 * ( @left + @gap ) );
 			}
 			.alignfull {
-				margin-left: calc( -1 * (  @left + @measure + @measure + ( ( 100vw - 1170px )/2 )  ) );
+				margin-left: calc( -1 * (  @left + @gap + @measure + ( ( 100vw - 1170px )/2 )  ) );
 			}
 		}
 	}
