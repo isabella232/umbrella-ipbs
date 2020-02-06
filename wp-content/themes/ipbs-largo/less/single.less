@@ -16,16 +16,35 @@
 	#page {
 		box-sizing: border-box; // make my life simpler
 		@media ( min-width: 769px ) and ( max-width: 979px ) {
-			padding: 0 2.5%;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
 		}
 		@media screen and ( min-width: 1170px ) {
-			padding: 0 @measure;
-			margin: 0 auto;
+			padding-left: @measure;
+			padding-right: @measure;
+			margin-top: 0;
+			margin-left: auto;
+			margin-right: auto;
 		}
+
+		padding-bottom: 2 * @measure;
+		margin-bottom: 2 * @measure;
+		border-bottom: 1px solid @grey;
+		#main {
+			margin-bottom: 0;
+		}
+	}
+	header + .entry-content {
+		margin-top: @measure;
 	}
 	.entry-content {
 		box-sizing: border-box;
 		position: relative;
+		margin-bottom: 0;
+
+		> :last-child {
+			margin-bottom: 0;
+		}
 
 		.alignleft {
 			box-sizing: border-box;
@@ -53,29 +72,32 @@
 		}
 		@media ( min-width: 700px ) {
 			@width: ( 95vw );
-			@left: calc( ( @width - @measure ) * 5/12);
-			padding-left: calc( @left + @measure );
+			@gap: 2 * @measure;
+			@left: calc( ( @width - @gap ) * 5/12);
+			padding-left: calc( @left + @gap );
 			> * {
 			}
 			.alignleft {
 				width: @left;
 				float: left;
+				clear: left;
 			}
 			.alignwide {
-				width: calc( @left + @measure + 100% );
+				width: calc( @left + @gap + 100% );
 				margin-right: 0;
 			}
 			.alignleft, .alignwide {
-				margin-left: calc( -1 * ( @left + @measure ) );
+				margin-left: calc( -1 * ( @left + @gap ) );
 			}
 			.alignfull {
-				margin-left: calc( -1 * ( @left + @measure + 2.5vw ) );
+				margin-left: calc( -1 * ( @left + @gap + 2.5vw ) );
 			}
 		}
 		@media ( min-width: 1170px ) {
 			@width: 1170px;
-			@left: calc( ( @width - @measure ) * 5/12);
-			padding-left: calc( @left + @measure );
+			@gap: 2 * @measure;
+			@left: calc( ( @width - @gap ) * 5/12);
+			padding-left: calc( @left + @gap );
 			> * {
 			}
 			.alignleft {
@@ -83,14 +105,14 @@
 				float: left;
 			}
 			.alignwide {
-				width: calc( @left + @measure + 100% );
+				width: calc( @left + @gap + 100% );
 				margin-right: 0;
 			}
 			.alignleft, .alignwide {
-				margin-left: calc( -1 * ( @left + @measure ) );
+				margin-left: calc( -1 * ( @left + @gap ) );
 			}
 			.alignfull {
-				margin-left: calc( -1 * (  @left + @measure + @measure + ( ( 100vw - 1170px )/2 )  ) );
+				margin-left: calc( -1 * (  @left + @gap + @measure + ( ( 100vw - 1170px )/2 )  ) );
 			}
 		}
 	}
