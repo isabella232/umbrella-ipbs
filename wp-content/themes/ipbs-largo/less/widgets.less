@@ -4,6 +4,16 @@
     }
 }
 
+.widget {
+    margin-bottom: @measure * 2!important;
+}
+
+// member stations map widget
+.widget.ipbs-member-map-widget {
+    .description {
+        text-align: center;
+    }
+}
 // member stations widget
 .widget.ipbs-member-stations {
     margin-bottom: @measure * 2;
@@ -17,15 +27,15 @@
             align-items: center;
             justify-content: center;
             border-bottom: 1px solid @grey;
-            padding-top: @measure;
-            padding-bottom: @measure;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
             margin-bottom: 0;
             &:not(:nth-child(3n)) {
                 border-right: 1px solid @grey;
             }
             img {
-                max-width: 150px;
-                max-height: 150px;
+                max-width: 100px;
+                max-height: 100px;
             }
             .member-stations-content {
                 margin-left: @measure;
@@ -65,6 +75,7 @@
     .video-widget {
         display: flex;
         align-items: center;
+        margin: @measure * 2 0;
         .video-widget-content-right {
             iframe {
                 width: 100%;
