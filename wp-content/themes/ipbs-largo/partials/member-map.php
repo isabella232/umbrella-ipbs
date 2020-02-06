@@ -32,4 +32,10 @@ wp_enqueue_script( 'ipbs-map-animate-dependency' );
 wp_enqueue_script( 'ipbs-map-animate' );
 wp_enqueue_style( 'ipbs-map-css' );
 
+echo '
+<div id="legend">
+	<span class="tv">TV <span class="visuallyhidden">stations are blue</span></span>
+	<span class="fm">FM <span class="visuallyhidden">stations are orange</span></span>
+	<span class="am">AM <span class="visuallyhidden">stations are yellow</span></span>
+</div>';
 echo file_get_contents( $path );

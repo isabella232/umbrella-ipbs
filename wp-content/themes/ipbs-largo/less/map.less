@@ -1,48 +1,7 @@
 @import (reference) "variables.less";
 @font-map-labels: @font-description;
 
-#map-frame{
-  width: 100%;
-  height: auto;
-
-  line {
-    stroke-dashoffset: 1000;
-  }
-  .coverage {
-    pointer-events: none;
-  }
-  .coverage > g > circle {
-    opacity: 0;
-  }
-  .coverage > g > line {
-    opacity: 0;
-  }
-  .coverage > g > text {
-    opacity: 0;
-    font-family: @font-map-labels;
-    font-weight: 700;
-    font-size: 22px;
-  }
-  .heading {
-    opacity: 0;
-  }
-  .label {
-    cursor: pointer;
-  }
-  .heading text,
-  .label text {
-    fill: #515350;
-    text-transform: uppercase;
-    font-family: @font-map-labels;
-    font-weight: 700;
-  }
-  .label text {
-    font-size: 24px;
-  }
-  .heading text {
-    font-size: 20px;
-  }
-
+.ipbs-member-map-widget {
   #legend {
     font-size: 16px;
     line-height: 16px;
@@ -50,6 +9,15 @@
     color: #221F1F;
     border: 2px solid #d1d2d3;
     padding: 0.5em;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: @measure * 2;
+    padding: @measure;
+    border-radius: 4px;
+    @media (max-width: 769px) {
+      width: unset;
+      text-align: center;
+    }
   }
   #legend span + span {
     padding-left: 1em;
@@ -83,14 +51,59 @@
     color: #FDC713;
     fill: #FDC713;
   }
-  .visuallyhidden {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
+  #map-frame{
+    width: 100%;
+    height: auto;
+    @media (min-width: 770px) {
+      max-width: 60%;
+      padding: 0 20%;
+    }
+    line {
+      stroke-dashoffset: 1000;
+    }
+    .coverage {
+      pointer-events: none;
+    }
+    .coverage > g > circle {
+      opacity: 0;
+    }
+    .coverage > g > line {
+      opacity: 0;
+    }
+    .coverage > g > text {
+      opacity: 0;
+      font-family: @font-map-labels;
+      font-weight: 700;
+      font-size: 22px;
+    }
+    .heading {
+      opacity: 0;
+    }
+    .label {
+      cursor: pointer;
+    }
+    .heading text,
+    .label text {
+      fill: #515350;
+      text-transform: uppercase;
+      font-family: @font-map-labels;
+      font-weight: 700;
+    }
+    .label text {
+      font-size: 24px;
+    }
+    .heading text {
+      font-size: 20px;
+    }
+    .visuallyhidden {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+    }
   }
 }
