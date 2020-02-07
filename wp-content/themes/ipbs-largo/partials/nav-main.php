@@ -73,7 +73,7 @@ if (
 					do_action( 'largo_after_main_nav_list_items' );
 				?>
                 </ul>
-                <ul class="bottom-nav">
+                <ul class="bottom-nav nav">
 				
 				<?php
 					/*
