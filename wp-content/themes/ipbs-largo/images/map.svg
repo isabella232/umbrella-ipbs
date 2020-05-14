@@ -678,37 +678,21 @@
 		<g id="fort_wayne">
 			<g class="heading">
 				<g>
-					<text x="1050" y="222">Fort Wayne</text>
+					<text x="1050" y="271">Fort Wayne</text>
 				</g>
 			</g>
 			<g class="coverage">
 				<g>
-
 					<line opacity="0.7" fill="none" stroke="#245A8F" stroke-width="3" stroke-miterlimit="10"
-						  x1="991.3" y1="241.5" x2="1044.3" y2="241.5"/>
-					<text class="tv" x="1050" y="248">WFWA - TV</text>
+						  x1="991.3" y1="286" x2="1044.3" y2="286"/>
+					<text class="tv" x="1050" y="293">WFWA - TV</text>
 					<circle opacity="0.7" fill="#245A8F" cx="890.8" cy="306" r="122.5"/>
 				</g>
 				<g>
-
-					<line opacity="0.3" fill="none" stroke="#ED2224" stroke-width="3" stroke-miterlimit="10"
-						  x1="883.3" y1="261.5" x2="1044.3" y2="261.5"/>
-					<text class="fm" x="1050" y="269">WCKZ - FM</text>
-					<circle opacity="0.3" fill="#ED2224" cx="852.8" cy="211" r="60.3"/>
-				</g>
-				<g>
 					<circle opacity="0.3" fill="#ED2224" cx="899.4" cy="307.6" r="100"/>
-
 					<line opacity="0.3" fill="none" stroke="#ED2224" stroke-width="3" stroke-miterlimit="10"
-						  x1="994.3" y1="283.5" x2="1044.3" y2="283.5"/>
-					<text class="fm" x="1050" y="292">WBOI - FM</text>
-				</g>
-				<g>
-
-					<line opacity="0.3" fill="none" stroke="#ED2224" stroke-width="3" stroke-miterlimit="10"
-						  x1="891.3" y1="308.5" x2="1044.3" y2="308.5"/>
-					<text class="fm" x="1050" y="314">W204BF - FM</text>
-					<circle opacity="0.3" fill="#ED2224" cx="877.4" cy="323.6" r="22.7"/>
+						  x1="994.3" y1="308" x2="1044.3" y2="308"/>
+					<text class="fm" x="1050" y="315">WBOI - FM</text>
 				</g>
 				<g>
 					<line opacity="0.3" fill="none" stroke="#ED2224" stroke-width="3" stroke-miterlimit="10"
@@ -753,26 +737,20 @@
 				</g>
 				<g>
 					<line opacity="0.3" fill="none" stroke="#ED2224" stroke-width="3" stroke-miterlimit="10"
-						  x1="957.3" y1="456" x2="1050" y2="456"/>
-					<text class="fm" x="1065" y="464">WBSJ-FM</text>
-					<circle opacity="0.3" fill="#ED2224" cx="921.2" cy="436.4" r="40.1"/>
-				</g>
-				<g>
-					<line opacity="0.3" fill="none" stroke="#ED2224" stroke-width="3" stroke-miterlimit="10"
-						  x1="895.3" y1="478" x2="1050" y2="478"/>
-					<text class="fm" x="1065" y="486">WBST-FM</text>
+						  x1="895.3" y1="456" x2="1050" y2="456"/>
+					<text class="fm" x="1065" y="464">WBST-FM</text>
 					<circle opacity="0.3" fill="#ED2224" cx="854.2" cy="496.4" r="44.1"/>
 				</g>
 				<g>
 					<line opacity="0.3" fill="none" stroke="#ED2224" stroke-width="3" stroke-miterlimit="10"
-						  x1="840.3" y1="500" x2="1050" y2="500"/>
-					<text class="fm" x="1065" y="508">WBSB-FM</text>
+						  x1="840.3" y1="478" x2="1050" y2="478"/>
+					<text class="fm" x="1065" y="486">WBSB-FM</text>
 					<circle opacity="0.3" fill="#ED2224" cx="811.2" cy="504.4" r="29.5"/>
 				</g>
 				<g>
 					<line opacity="0.3" fill="none" stroke="#ED2224" stroke-width="3" stroke-miterlimit="10"
-						  x1="919.3" y1="522" x2="1050" y2="522"/>
-					<text class="fm" x="1065" y="530">WBSH-FM</text>
+						  x1="919.3" y1="500" x2="1050" y2="500"/>
+					<text class="fm" x="1065" y="508">WBSH-FM</text>
 					<circle opacity="0.3" fill="#ED2224" cx="904.2" cy="560.4" r="39.1"/>
 				</g>
 			</g>
