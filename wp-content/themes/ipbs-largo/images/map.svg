@@ -621,10 +621,10 @@
 		</g>
 	</g>
 	<g id="cities">
-		<g id="south_bend_x2F__elkhart">
+		<g id="south_bend">
 			<g class="heading">
 				<g>
-					<text x="960" y="160">South Bend/Elkhart</text>
+					<text x="960" y="160">South Bend</text>
 				</g>
 			</g>
 			<g class="coverage">
@@ -635,9 +635,30 @@
 					<line opacity="0.7" fill="none" stroke="#245A8F" stroke-width="3" stroke-miterlimit="10"
 						  x1="861.3" y1="176.5" x2="951.3" y2="176.5"/>
 				</g>
+			</g>
+			<g class="label">
+				<g>
+					<text x="590" y="180">South Bend</text>
+				</g>
+				<circle fill="#989898" cx="719" cy="200" r="14"/>
+				<!-- <circle opacity="0.7" fill="#245A8F" cx="723.2" cy="198.5" r="5"/>
+				<circle opacity="0.3" fill="#ED2224" cx="741.4" cy="197.6" r="5"/> -->
+				<rect x="590" y="150" opacity="1.000000e-02" fill="#FFFFFF" width="150" height="40"
+					  onclick="animateClickedCity('south_bend')"/>
+				<rect x="700" y="180" opacity="1.000000e-02" fill="#FFFFFF" width="40" height="40"
+					  onclick="animateClickedCity('south_bend')"/>
+			</g>
+		</g>
+		<g id="elkhart">
+			<g class="heading">
+				<g>
+					<text x="960" y="182">Elkhart</text>
+				</g>
+			</g>
+			<g class="coverage">
 				<g>
 					<circle opacity="0.3" fill="#ED2224" cx="741.4" cy="197.6" r="100"/>
-					<text class="fm" x="961" y="204">WVPE - TV</text>
+					<text class="fm" x="961" y="204">WVPE - FM</text>
 
 					<line opacity="0.3" fill="none" stroke="#ED2224" stroke-width="3" stroke-miterlimit="10"
 						  x1="841.3" y1="197.5" x2="951.3" y2="197.5"/>
@@ -645,13 +666,13 @@
 			</g>
 			<g class="label">
 				<g>
-					<text x="613.2" y="183.4">South Bend/Elkhart</text>
+					<text x="760" y="170">Elkhart</text>
 				</g>
-				<circle fill="#989898" cx="718.7" cy="199.3" r="14"/>
+				<circle fill="#989898" cx="772" cy="190" r="14"/>
 				<!-- <circle opacity="0.7" fill="#245A8F" cx="723.2" cy="198.5" r="5"/>
 				<circle opacity="0.3" fill="#ED2224" cx="741.4" cy="197.6" r="5"/> -->
-				<rect x="629" y="169.9" opacity="1.000000e-02" fill="#FFFFFF" width="213" height="40.7"
-					  onclick="animateClickedCity('south_bend_x2F__elkhart')"/>
+				<rect x="750" y="150" opacity="1.000000e-02" fill="#FFFFFF" width="213" height="60"
+					  onclick="animateClickedCity('elkhart')"/>
 			</g>
 		</g>
 		<g id="fort_wayne">
