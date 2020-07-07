@@ -70,7 +70,7 @@ add_filter( 'largo_partial_by_post_type', 'add_ipbs_jobs_custom_partial', 10, 3 
  */
 function update_ipbs_jobs_archive_title( $title ){
 
-	$title = 'Job Boards';
+	$title = 'Employment Opportunities';
 	return $title;
 
 }
